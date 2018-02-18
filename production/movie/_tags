@@ -1,0 +1,11 @@
+# Warnings
+true: warn(Aer-44-45)
+
+# Generate type annotation file and support threads
+true: annot, thread
+
+# Compiler tags
+true: optimize(3)
+
+# Link
+true: package(lacaml, plplot, batteries, core, parmap)

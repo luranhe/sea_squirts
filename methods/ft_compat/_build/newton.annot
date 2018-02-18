@@ -1,0 +1,720 @@
+"newton.ml" 5 73 77 "newton.ml" 5 73 85
+type(
+  (Lacaml.D.vec -> Lacaml.D.vec) ->
+  (Lacaml.D.vec -> Lacaml.D.mat) ->
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+ident(
+  def findzero "newton.ml" 18 418 418 "newton.ml" 1 0 -1
+)
+"newton.ml" 6 87 88 "newton.ml" 6 87 92
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  def bigG "newton.ml" 7 108 108 "newton.ml" 16 402 411
+)
+"newton.ml" 7 108 109 "newton.ml" 7 108 114
+type(
+  Lacaml.D.vec -> Lacaml.D.mat
+)
+ident(
+  def bigG' "newton.ml" 8 130 130 "newton.ml" 16 402 411
+)
+"newton.ml" 8 130 132 "newton.ml" 8 130 135
+type(
+  float
+)
+"newton.ml" 8 130 146 "newton.ml" 8 130 151
+type(
+  float
+)
+type(
+  float
+)
+ident(
+  int_ref *sth* "newton.ml" 8 130 146 "newton.ml" 8 130 151
+)
+type(
+  float option
+)
+type(
+  float option
+)
+type(
+  float
+)
+"newton.ml" 9 154 155 "newton.ml" 9 154 160
+type(
+  Lacaml.D.vec
+)
+ident(
+  def guess "newton.ml" 10 169 169 "newton.ml" 16 402 411
+)
+"newton.ml" 10 169 170 "newton.ml" 10 169 178
+type(
+  Lacaml.D.mat
+)
+ident(
+  def curr_mat "newton.ml" 11 187 189 "newton.ml" 16 402 411
+)
+"newton.ml" 12 199 209 "newton.ml" 12 199 213
+type(
+  unit -> unit
+)
+ident(
+  def loop "newton.ml" 12 199 201 "newton.ml" 16 402 411
+)
+"newton.ml" 12 199 214 "newton.ml" 12 199 216
+type(
+  unit
+)
+"newton.ml" 13 227 235 "newton.ml" 13 227 239
+type(
+  Lacaml.D.vec
+)
+ident(
+  def curr "newton.ml" 14 263 267 "newton.ml" 15 323 397
+)
+"newton.ml" 13 227 248 "newton.ml" 13 227 252
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  int_ref bigG "newton.ml" 6 87 88 "newton.ml" 6 87 92
+)
+"newton.ml" 13 227 253 "newton.ml" 13 227 258
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 9 154 155 "newton.ml" 9 154 160
+)
+"newton.ml" 13 227 248 "newton.ml" 13 227 258
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml.D.vec
+)
+"newton.ml" 14 263 271 "newton.ml" 14 263 275
+type(
+  ?n:int -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> float
+)
+ident(
+  ext_ref Lacaml.D.asum
+)
+"newton.ml" 14 263 276 "newton.ml" 14 263 280
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref curr "newton.ml" 13 227 235 "newton.ml" 13 227 239
+)
+"newton.ml" 14 263 271 "newton.ml" 14 263 280
+call(
+  stack
+)
+type(
+  float
+)
+"newton.ml" 14 263 281 "newton.ml" 14 263 283
+type(
+  float -> (float -> float) -> float
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"newton.ml" 14 263 284 "newton.ml" 14 263 293
+type(
+  float -> float
+)
+ident(
+  ext_ref Pervasives.abs_float
+)
+"newton.ml" 14 263 270 "newton.ml" 14 263 294
+type(
+  float
+)
+"newton.ml" 14 263 295 "newton.ml" 14 263 297
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( /. )
+)
+"newton.ml" 14 263 299 "newton.ml" 14 263 303
+type(
+  ?n:int -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> float
+)
+ident(
+  ext_ref Lacaml.D.asum
+)
+"newton.ml" 14 263 304 "newton.ml" 14 263 309
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 9 154 155 "newton.ml" 9 154 160
+)
+"newton.ml" 14 263 298 "newton.ml" 14 263 310
+call(
+  stack
+)
+type(
+  float
+)
+"newton.ml" 14 263 270 "newton.ml" 14 263 310
+type(
+  float
+)
+"newton.ml" 14 263 311 "newton.ml" 14 263 312
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"newton.ml" 14 263 313 "newton.ml" 14 263 316
+type(
+  float
+)
+ident(
+  int_ref tol "newton.ml" 8 130 132 "newton.ml" 8 130 135
+)
+"newton.ml" 14 263 270 "newton.ml" 14 263 316
+type(
+  bool
+)
+"newton.ml" 15 323 330 "newton.ml" 15 323 334
+type(
+  ?n:int ->
+  ?ipiv:Lacaml__common.int32_vec ->
+  ?ar:int ->
+  ?ac:int ->
+  Lacaml.D.mat -> ?nrhs:int -> ?br:int -> ?bc:int -> Lacaml.D.mat -> unit
+)
+ident(
+  ext_ref Lacaml.D.gesv
+)
+"newton.ml" 15 323 336 "newton.ml" 15 323 341
+type(
+  Lacaml.D.vec -> Lacaml.D.mat
+)
+ident(
+  int_ref bigG' "newton.ml" 7 108 109 "newton.ml" 7 108 114
+)
+"newton.ml" 15 323 342 "newton.ml" 15 323 347
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 9 154 155 "newton.ml" 9 154 160
+)
+"newton.ml" 15 323 335 "newton.ml" 15 323 348
+call(
+  stack
+)
+type(
+  Lacaml.D.mat
+)
+"newton.ml" 15 323 349 "newton.ml" 15 323 357
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref curr_mat "newton.ml" 10 169 170 "newton.ml" 10 169 178
+)
+"newton.ml" 15 323 330 "newton.ml" 15 323 357
+call(
+  stack
+)
+type(
+  unit
+)
+"newton.ml" 15 323 359 "newton.ml" 15 323 363
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"newton.ml" 15 323 371 "newton.ml" 15 323 376
+type(
+  float
+)
+"newton.ml" 15 323 377 "newton.ml" 15 323 381
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref curr "newton.ml" 13 227 235 "newton.ml" 13 227 239
+)
+"newton.ml" 15 323 382 "newton.ml" 15 323 387
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 9 154 155 "newton.ml" 9 154 160
+)
+"newton.ml" 15 323 359 "newton.ml" 15 323 387
+call(
+  stack
+)
+type(
+  unit
+)
+"newton.ml" 15 323 389 "newton.ml" 15 323 393
+type(
+  unit -> unit
+)
+ident(
+  int_ref loop "newton.ml" 12 199 209 "newton.ml" 12 199 213
+)
+"newton.ml" 15 323 394 "newton.ml" 15 323 396
+type(
+  unit
+)
+"newton.ml" 15 323 389 "newton.ml" 15 323 396
+call(
+  tail
+)
+type(
+  unit
+)
+"newton.ml" 15 323 359 "newton.ml" 15 323 396
+type(
+  unit
+)
+"newton.ml" 15 323 329 "newton.ml" 15 323 397
+type(
+  unit
+)
+"newton.ml" 14 263 267 "newton.ml" 15 323 397
+type(
+  unit
+)
+"newton.ml" 13 227 231 "newton.ml" 15 323 397
+type(
+  unit
+)
+type(
+  unit
+)
+"newton.ml" 16 402 404 "newton.ml" 16 402 408
+type(
+  unit -> unit
+)
+ident(
+  int_ref loop "newton.ml" 12 199 209 "newton.ml" 12 199 213
+)
+"newton.ml" 16 402 409 "newton.ml" 16 402 411
+type(
+  unit
+)
+"newton.ml" 16 402 404 "newton.ml" 16 402 411
+call(
+  tail
+)
+type(
+  unit
+)
+"newton.ml" 12 199 201 "newton.ml" 16 402 411
+type(
+  unit
+)
+type(
+  unit
+)
+"newton.ml" 18 418 422 "newton.ml" 18 418 438
+type(
+  (Lacaml.D.vec -> Lacaml.D.vec) ->
+  (Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec) ->
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+ident(
+  def findzero_tridiag "newton.ml" 30 820 832 "newton.ml" 1 0 -1
+)
+"newton.ml" 19 440 441 "newton.ml" 19 440 445
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  def bigG "newton.ml" 20 461 461 "newton.ml" 30 820 832
+)
+"newton.ml" 20 461 462 "newton.ml" 20 461 469
+type(
+  Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+ident(
+  def tridiag "newton.ml" 21 499 499 "newton.ml" 30 820 832
+)
+"newton.ml" 21 499 501 "newton.ml" 21 499 504
+type(
+  float
+)
+"newton.ml" 21 499 515 "newton.ml" 21 499 520
+type(
+  float
+)
+type(
+  float
+)
+ident(
+  int_ref *sth* "newton.ml" 21 499 515 "newton.ml" 21 499 520
+)
+type(
+  float option
+)
+type(
+  float option
+)
+type(
+  float
+)
+"newton.ml" 22 523 524 "newton.ml" 22 523 529
+type(
+  Lacaml.D.vec
+)
+ident(
+  def guess "newton.ml" 23 538 538 "newton.ml" 30 820 832
+)
+"newton.ml" 23 538 539 "newton.ml" 23 538 547
+type(
+  Lacaml.D.mat
+)
+ident(
+  def curr_mat "newton.ml" 24 556 558 "newton.ml" 30 820 832
+)
+"newton.ml" 25 568 578 "newton.ml" 25 568 582
+type(
+  unit -> unit
+)
+ident(
+  def loop "newton.ml" 25 568 570 "newton.ml" 30 820 832
+)
+"newton.ml" 25 568 583 "newton.ml" 25 568 585
+type(
+  unit
+)
+"newton.ml" 26 596 604 "newton.ml" 26 596 608
+type(
+  Lacaml.D.vec
+)
+ident(
+  def curr "newton.ml" 27 632 636 "newton.ml" 29 750 818
+)
+"newton.ml" 26 596 617 "newton.ml" 26 596 621
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  int_ref bigG "newton.ml" 19 440 441 "newton.ml" 19 440 445
+)
+"newton.ml" 26 596 622 "newton.ml" 26 596 627
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 22 523 524 "newton.ml" 22 523 529
+)
+"newton.ml" 26 596 617 "newton.ml" 26 596 627
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml.D.vec
+)
+"newton.ml" 27 632 641 "newton.ml" 27 632 643
+type(
+  Lacaml.D.vec
+)
+ident(
+  def dl "newton.ml" 28 690 694 "newton.ml" 29 750 818
+)
+"newton.ml" 27 632 645 "newton.ml" 27 632 646
+type(
+  Lacaml.D.vec
+)
+ident(
+  def d "newton.ml" 28 690 694 "newton.ml" 29 750 818
+)
+"newton.ml" 27 632 648 "newton.ml" 27 632 650
+type(
+  Lacaml.D.vec
+)
+ident(
+  def du "newton.ml" 28 690 694 "newton.ml" 29 750 818
+)
+"newton.ml" 27 632 640 "newton.ml" 27 632 651
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"newton.ml" 27 632 672 "newton.ml" 27 632 679
+type(
+  Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+ident(
+  int_ref tridiag "newton.ml" 20 461 462 "newton.ml" 20 461 469
+)
+"newton.ml" 27 632 680 "newton.ml" 27 632 685
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 22 523 524 "newton.ml" 22 523 529
+)
+"newton.ml" 27 632 672 "newton.ml" 27 632 685
+call(
+  stack
+)
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"newton.ml" 28 690 698 "newton.ml" 28 690 702
+type(
+  ?n:int -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> float
+)
+ident(
+  ext_ref Lacaml.D.asum
+)
+"newton.ml" 28 690 703 "newton.ml" 28 690 707
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref curr "newton.ml" 26 596 604 "newton.ml" 26 596 608
+)
+"newton.ml" 28 690 698 "newton.ml" 28 690 707
+call(
+  stack
+)
+type(
+  float
+)
+"newton.ml" 28 690 708 "newton.ml" 28 690 710
+type(
+  float -> (float -> float) -> float
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"newton.ml" 28 690 711 "newton.ml" 28 690 720
+type(
+  float -> float
+)
+ident(
+  ext_ref Pervasives.abs_float
+)
+"newton.ml" 28 690 697 "newton.ml" 28 690 721
+type(
+  float
+)
+"newton.ml" 28 690 722 "newton.ml" 28 690 724
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( /. )
+)
+"newton.ml" 28 690 726 "newton.ml" 28 690 730
+type(
+  ?n:int -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> float
+)
+ident(
+  ext_ref Lacaml.D.asum
+)
+"newton.ml" 28 690 731 "newton.ml" 28 690 736
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 22 523 524 "newton.ml" 22 523 529
+)
+"newton.ml" 28 690 725 "newton.ml" 28 690 737
+call(
+  stack
+)
+type(
+  float
+)
+"newton.ml" 28 690 697 "newton.ml" 28 690 737
+type(
+  float
+)
+"newton.ml" 28 690 738 "newton.ml" 28 690 739
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"newton.ml" 28 690 740 "newton.ml" 28 690 743
+type(
+  float
+)
+ident(
+  int_ref tol "newton.ml" 21 499 501 "newton.ml" 21 499 504
+)
+"newton.ml" 28 690 697 "newton.ml" 28 690 743
+type(
+  bool
+)
+"newton.ml" 29 750 757 "newton.ml" 29 750 761
+type(
+  ?n:int ->
+  ?ofsdl:int ->
+  Lacaml.D.vec ->
+  ?ofsd:int ->
+  Lacaml.D.vec ->
+  ?ofsdu:int ->
+  Lacaml.D.vec -> ?nrhs:int -> ?br:int -> ?bc:int -> Lacaml.D.mat -> unit
+)
+ident(
+  ext_ref Lacaml.D.gtsv
+)
+"newton.ml" 29 750 762 "newton.ml" 29 750 764
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref dl "newton.ml" 27 632 641 "newton.ml" 27 632 643
+)
+"newton.ml" 29 750 765 "newton.ml" 29 750 766
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref d "newton.ml" 27 632 645 "newton.ml" 27 632 646
+)
+"newton.ml" 29 750 767 "newton.ml" 29 750 769
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref du "newton.ml" 27 632 648 "newton.ml" 27 632 650
+)
+"newton.ml" 29 750 770 "newton.ml" 29 750 778
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref curr_mat "newton.ml" 23 538 539 "newton.ml" 23 538 547
+)
+"newton.ml" 29 750 757 "newton.ml" 29 750 778
+call(
+  stack
+)
+type(
+  unit
+)
+"newton.ml" 29 750 780 "newton.ml" 29 750 784
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"newton.ml" 29 750 792 "newton.ml" 29 750 797
+type(
+  float
+)
+"newton.ml" 29 750 798 "newton.ml" 29 750 802
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref curr "newton.ml" 26 596 604 "newton.ml" 26 596 608
+)
+"newton.ml" 29 750 803 "newton.ml" 29 750 808
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "newton.ml" 22 523 524 "newton.ml" 22 523 529
+)
+"newton.ml" 29 750 780 "newton.ml" 29 750 808
+call(
+  stack
+)
+type(
+  unit
+)
+"newton.ml" 29 750 810 "newton.ml" 29 750 814
+type(
+  unit -> unit
+)
+ident(
+  int_ref loop "newton.ml" 25 568 578 "newton.ml" 25 568 582
+)
+"newton.ml" 29 750 815 "newton.ml" 29 750 817
+type(
+  unit
+)
+"newton.ml" 29 750 810 "newton.ml" 29 750 817
+call(
+  tail
+)
+type(
+  unit
+)
+"newton.ml" 29 750 780 "newton.ml" 29 750 817
+type(
+  unit
+)
+"newton.ml" 29 750 756 "newton.ml" 29 750 818
+type(
+  unit
+)
+"newton.ml" 28 690 694 "newton.ml" 29 750 818
+type(
+  unit
+)
+"newton.ml" 27 632 636 "newton.ml" 29 750 818
+type(
+  unit
+)
+"newton.ml" 26 596 600 "newton.ml" 29 750 818
+type(
+  unit
+)
+type(
+  unit
+)
+"newton.ml" 30 820 825 "newton.ml" 30 820 829
+type(
+  unit -> unit
+)
+ident(
+  int_ref loop "newton.ml" 25 568 578 "newton.ml" 25 568 582
+)
+"newton.ml" 30 820 830 "newton.ml" 30 820 832
+type(
+  unit
+)
+"newton.ml" 30 820 825 "newton.ml" 30 820 832
+call(
+  tail
+)
+type(
+  unit
+)
+"newton.ml" 25 568 570 "newton.ml" 30 820 832
+type(
+  unit
+)
+type(
+  unit
+)

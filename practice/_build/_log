@@ -1,0 +1,8 @@
+### Starting build.
+# Target: onecellEuler.ml.depends, tags: { extension:ml, file:onecellEuler.ml, ocaml, ocamldep, quiet }
+/home/luranhe/.opam/4.02.3/bin/ocamldep.opt -modules onecellEuler.ml > onecellEuler.ml.depends
+# Target: onecellEuler.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:onecellEuler.cmo, file:onecellEuler.ml, implem, ocaml, quiet }
+/home/luranhe/.opam/4.02.3/bin/ocamlc.opt -c -I /home/luranhe/.opam/4.02.3/lib/ocaml -o onecellEuler.cmo onecellEuler.ml
+# Target: onecellEuler.byte, tags: { byte, dont_link_with, extension:byte, file:onecellEuler.byte, link, ocaml, program, quiet }
+/home/luranhe/.opam/4.02.3/bin/ocamlc.opt -I /home/luranhe/.opam/4.02.3/lib/ocaml unix.cma onecellEuler.cmo -o onecellEuler.byte
+# Compilation successful.

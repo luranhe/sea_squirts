@@ -1,0 +1,367 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12675,        357]
+NotebookOptionsPosition[     11694,        327]
+NotebookOutlinePosition[     12038,        342]
+CellTagsIndexPosition[     11995,        339]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\"\<in\>\"", "]"}], "=", "0.1"}], ";", 
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\"\<out\>\"", "]"}], "=", "2.4"}], ";", 
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\"\<open\>\"", "]"}], "=", "130"}], ";", 
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "\"\<close\>\"", "]"}], "=", "150"}], 
+  ";"}]], "Input",ExpressionUUID->"9509966a-3db6-45cf-96ac-b4d74d2568b9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";", 
+  RowBox[{"vc", "=", "0.13"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7052715926524315`*^9, 
+  3.7052716171352344`*^9}},ExpressionUUID->"02dd29f0-f6a6-4e5a-a8ff-\
+86136f3231cd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", 
+  RowBox[{"s", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"v", "[", 
+           RowBox[{"t", ",", "x"}], "]"}], ",", "t"}], "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{"k", " ", 
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"v", "[", 
+             RowBox[{"t", ",", "x"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "2"}], "}"}]}], "]"}]}], "+", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"h", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], 
+           RowBox[{"\[Tau]", "[", "\"\<in\>\"", "]"}]], 
+          SuperscriptBox[
+           RowBox[{"v", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], "2"], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"v", "[", 
+             RowBox[{"t", ",", "x"}], "]"}]}], ")"}]}], "-", 
+         FractionBox[
+          RowBox[{"v", "[", 
+           RowBox[{"t", ",", "x"}], "]"}], 
+          RowBox[{"\[Tau]", "[", "\"\<out\>\"", "]"}]]}]}], ",", 
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{
+          RowBox[{"h", "[", 
+           RowBox[{"t", ",", "x"}], "]"}], ",", "t"}], "]"}], "\[Equal]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"v", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], "\[LessEqual]", "vc"}], ",", 
+          FractionBox[
+           RowBox[{"(", 
+            RowBox[{"1", "-", 
+             RowBox[{"h", "[", 
+              RowBox[{"t", ",", "x"}], "]"}]}], ")"}], 
+           RowBox[{"\[Tau]", "[", "\"\<open\>\"", "]"}]], ",", 
+          FractionBox[
+           RowBox[{"-", 
+            RowBox[{"h", "[", 
+             RowBox[{"t", ",", "x"}], "]"}]}], 
+           RowBox[{"\[Tau]", "[", "\"\<close\>\"", "]"}]]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"v", "[", 
+             RowBox[{"t", ",", "x"}], "]"}], ",", "x"}], "]"}], "/.", 
+          RowBox[{"x", "\[Rule]", "0"}]}], ")"}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"v", "[", 
+             RowBox[{"t", ",", "x"}], "]"}], ",", "x"}], "]"}], "/.", 
+          RowBox[{"x", "\[Rule]", "3"}]}], ")"}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{"v", "[", 
+         RowBox[{"0", ",", "x"}], "]"}], "\[Equal]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"x", "\[LessEqual]", "0.05"}], ",", "0.8", ",", "0"}], 
+         "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"h", "[", 
+         RowBox[{"0", ",", "x"}], "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "h"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7052715525629263`*^9, 3.705271579576335*^9}, {
+  3.7052716317819824`*^9, 3.705271979350892*^9}, {3.705272083512451*^9, 
+  3.7052721081807766`*^9}, {3.705272238755488*^9, 
+  3.7052722390727153`*^9}},ExpressionUUID->"9395b0cb-0706-48f1-a6f1-\
+b65bb0d87dc5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","bcedge",
+   "\"Boundary condition \\!\\(\\*RowBox[{RowBox[{SuperscriptBox[\\\"v\\\", \
+TagBox[RowBox[{\\\"(\\\", RowBox[{\\\"0\\\", \\\",\\\", \\\"1\\\"}], \
+\\\")\\\"}], Derivative], Rule[MultilineFunction, None]], \\\"[\\\", RowBox[{\
+\\\"t\\\", \\\",\\\", \\\"3\\\"}], \\\"]\\\"}], \\\"\[Equal]\\\", \\\"0\\\"}]\
+\\) is not specified on a single edge of the boundary of the computational \
+domain.\"",2,3,1,32172064083326130964,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7052719808291273`*^9, {3.7052720967833943`*^9, 3.705272108795889*^9}, 
+   3.7052722457774925`*^9, 
+   3.7052723485809965`*^9},ExpressionUUID->"81038399-03a6-4d73-97d2-\
+2ddbd2eec7ff"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0.37332824801048375`", ",", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["v", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"t", ",", "x"}], "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "0.4166666666666667`"}], " ", 
+          RowBox[{"v", "[", 
+           RowBox[{"t", ",", "x"}], "]"}]}], "+", 
+         RowBox[{"10.`", " ", 
+          RowBox[{"h", "[", 
+           RowBox[{"t", ",", "x"}], "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"v", "[", 
+             RowBox[{"t", ",", "x"}], "]"}]}], ")"}], " ", 
+          SuperscriptBox[
+           RowBox[{"v", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], "2"]}], "+", 
+         RowBox[{
+          SuperscriptBox["v", 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"0", ",", "2"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"t", ",", "x"}], "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["h", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"1", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"t", ",", "x"}], "]"}], "\[Equal]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"v", "[", 
+            RowBox[{"t", ",", "x"}], "]"}], "\[LessEqual]", "0.13`"}], ",", 
+          FractionBox[
+           RowBox[{"1", "-", 
+            RowBox[{"h", "[", 
+             RowBox[{"t", ",", "x"}], "]"}]}], 
+           RowBox[{"\[Tau]", "[", "\<\"open\"\>", "]"}]], ",", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"h", "[", 
+             RowBox[{"t", ",", "x"}], "]"}], 
+            RowBox[{"\[Tau]", "[", "\<\"close\"\>", "]"}]]}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["v", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"t", ",", "0"}], "]"}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["v", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"0", ",", "1"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"t", ",", "3"}], "]"}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{"v", "[", 
+         RowBox[{"0", ",", "x"}], "]"}], "\[Equal]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"x", "\[LessEqual]", "0.05`"}], ",", "0.8`", ",", "0"}], 
+         "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"h", "[", 
+         RowBox[{"0", ",", "x"}], "]"}], "\[Equal]", "1"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "h"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7052719808366327`*^9, {3.7052720986793165`*^9, 3.7052721120622025`*^9}, 
+   3.7052722458915744`*^9, 
+   3.7052723489316573`*^9},ExpressionUUID->"2d91b9d7-e495-4c85-8d29-\
+89d443bc5001"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Evaluate", "[", 
+      RowBox[{
+       RowBox[{"v", "[", 
+        RowBox[{"t", ",", "x"}], "]"}], "/.", "s"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7052721239097595`*^9, 3.705272138750104*^9}, {
+  3.705272254225973*^9, 
+  3.705272255691696*^9}},ExpressionUUID->"7e39dd63-021c-45d0-9e28-\
+2759ca126813"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 20}}, Typeset`size$$ = {360., {118., 125.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$4148$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$4148$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        Evaluate[
+         ReplaceAll[
+          $CellContext`v[$CellContext`t$$, $CellContext`x], $CellContext`s]], \
+{$CellContext`x, 0, 10}, PlotRange -> {0, 1}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 20, AnimationRunning -> 
+         False, AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {157., 164.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.705272172128519*^9, 3.7052722571818666`*^9, 
+  3.70527235314786*^9},ExpressionUUID->"041f81d8-8a7f-4f8d-9a20-c6fb32b0389b"]
+}, Open  ]]
+},
+WindowSize->{759, 793},
+WindowMargins->{{Automatic, 332}, {24, Automatic}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 410, 10, 30, "Input", "ExpressionUUID" -> \
+"9509966a-3db6-45cf-96ac-b4d74d2568b9"],
+Cell[971, 32, 234, 6, 30, "Input", "ExpressionUUID" -> \
+"02dd29f0-f6a6-4e5a-a8ff-86136f3231cd"],
+Cell[CellGroupData[{
+Cell[1230, 42, 3361, 93, 176, "Input", "ExpressionUUID" -> \
+"9395b0cb-0706-48f1-a6f1-b65bb0d87dc5"],
+Cell[4594, 137, 731, 14, 42, "Message", "ExpressionUUID" -> \
+"81038399-03a6-4d73-97d2-2ddbd2eec7ff"],
+Cell[5328, 153, 3420, 101, 139, "Output", "ExpressionUUID" -> \
+"2d91b9d7-e495-4c85-8d29-89d443bc5001"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8785, 259, 733, 20, 50, "Input", "ExpressionUUID" -> \
+"7e39dd63-021c-45d0-9e28-2759ca126813"],
+Cell[9521, 281, 2157, 43, 371, "Output", "ExpressionUUID" -> \
+"041f81d8-8a7f-4f8d-9a20-c6fb32b0389b"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

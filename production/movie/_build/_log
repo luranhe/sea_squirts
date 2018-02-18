@@ -1,0 +1,34 @@
+### Starting build.
+# Target: driver.ml.depends, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:driver.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules driver.ml > driver.ml.depends # cached
+# Target: movie.ml.depends, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:movie.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules movie.ml > movie.ml.depends # cached
+# Target: multicellparams.ml.depends, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:multicellparams.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules multicellparams.ml > multicellparams.ml.depends # cached
+# Target: multicellparams.cmo, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:multicellparams.cmo, file:multicellparams.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellparams.cmo multicellparams.ml # cached
+# Target: movie.cmo, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:movie.cmo, file:movie.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o movie.cmo movie.ml # cached
+# Target: multicellsolver.ml.depends, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:multicellsolver.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules multicellsolver.ml > multicellsolver.ml.depends # cached
+# Target: multicellsolver.cmo, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:multicellsolver.cmo, file:multicellsolver.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellsolver.cmo multicellsolver.ml # cached
+# Target: solvers.ml.depends, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:solvers.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules solvers.ml > solvers.ml.depends # cached
+# Target: solvers.cmo, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:solvers.cmo, file:solvers.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o solvers.cmo solvers.ml # cached
+# Target: driver.cmo, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:driver.cmo, file:driver.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o driver.cmo driver.ml # cached
+# Target: multicellparams.cmx, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:multicellparams.cmx, file:multicellparams.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -O3 -w Aer-44-45 -o multicellparams.cmx multicellparams.ml # cached
+# Target: movie.cmx, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:movie.cmx, file:movie.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -O3 -w Aer-44-45 -o movie.cmx movie.ml # cached
+# Target: multicellsolver.cmx, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:multicellsolver.cmx, file:multicellsolver.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -O3 -w Aer-44-45 -o multicellsolver.cmx multicellsolver.ml # cached
+# Target: solvers.cmx, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:solvers.cmx, file:solvers.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -O3 -w Aer-44-45 -o solvers.cmx solvers.ml # cached
+# Target: driver.cmx, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:driver.cmx, file:driver.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -O3 -w Aer-44-45 -o driver.cmx driver.ml # cached
+# Target: driver.native, tags: { optimize(3), package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, dont_link_with, extension:native, file:driver.native, link, native, ocaml, program, quiet, thread, traverse }
+ocamlfind ocamlopt -linkpkg -thread -package 'lacaml, plplot, batteries, core, parmap' multicellparams.cmx movie.cmx multicellsolver.cmx solvers.cmx driver.cmx -o driver.native # cached
+# Compilation successful.

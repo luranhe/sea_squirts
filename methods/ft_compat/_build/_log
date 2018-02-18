@@ -1,0 +1,28 @@
+### Starting build.
+# Target: multicellsolver.ml.depends, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:multicellsolver.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules multicellsolver.ml > multicellsolver.ml.depends # cached
+# Target: multicellparams.ml.depends, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:multicellparams.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules multicellparams.ml > multicellparams.ml.depends
+# Target: solvers.ml.depends, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:solvers.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules solvers.ml > solvers.ml.depends # cached
+# Target: newton.ml.depends, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, extension:ml, file:newton.ml, ocaml, ocamldep, quiet, thread, traverse }
+ocamlfind ocamldep -package 'lacaml, plplot, batteries, core, parmap' -modules newton.ml > newton.ml.depends # cached
+# Target: newton.cmo, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:newton.cmo, file:newton.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o newton.cmo newton.ml # cached
+# Target: solvers.cmo, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:solvers.cmo, file:solvers.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o solvers.cmo solvers.ml # cached
+# Target: multicellparams.cmo, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:multicellparams.cmo, file:multicellparams.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellparams.cmo multicellparams.ml
+# Target: multicellsolver.cmo, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, byte, compile, extension:cmo, extension:ml, file:multicellsolver.cmo, file:multicellsolver.ml, implem, ocaml, quiet, thread, traverse }
+ocamlfind ocamlc -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellsolver.cmo multicellsolver.ml # cached
+# Target: newton.cmx, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:newton.cmx, file:newton.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o newton.cmx newton.ml # cached
+# Target: solvers.cmx, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:solvers.cmx, file:solvers.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o solvers.cmx solvers.ml # cached
+# Target: multicellparams.cmx, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:multicellparams.cmx, file:multicellparams.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellparams.cmx multicellparams.ml
+# Target: multicellsolver.cmx, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, compile, extension:cmx, extension:ml, file:multicellsolver.cmx, file:multicellsolver.ml, implem, native, ocaml, quiet, thread, traverse }
+ocamlfind ocamlopt -c -annot -thread -package 'lacaml, plplot, batteries, core, parmap' -w Aer-44-45 -o multicellsolver.cmx multicellsolver.ml
+# Target: multicellsolver.native, tags: { package(lacaml, plplot, batteries, core, parmap), warn(Aer-44-45), annot, dont_link_with, extension:native, file:multicellsolver.native, link, native, ocaml, program, quiet, thread, traverse }
+ocamlfind ocamlopt -linkpkg -thread -package 'lacaml, plplot, batteries, core, parmap' multicellparams.cmx newton.cmx solvers.cmx multicellsolver.cmx -o multicellsolver.native
+# Compilation successful.

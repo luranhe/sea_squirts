@@ -1,0 +1,3002 @@
+"solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+type(
+  int
+)
+ident(
+  def numpoints "solvers.ml" 5 84 84 "solvers.ml" 1 0 -1
+)
+"solvers.ml" 3 53 75 "solvers.ml" 3 53 77
+type(
+  int
+)
+type(
+  int
+)
+"solvers.ml" 16 337 341 "solvers.ml" 16 337 345
+type(
+  int Batteries.ref
+)
+ident(
+  def kick "solvers.ml" 18 370 370 "solvers.ml" 1 0 -1
+)
+"solvers.ml" 16 337 358 "solvers.ml" 16 337 361
+type(
+  int -> int Batteries.ref
+)
+ident(
+  ext_ref Batteries.ref
+)
+"solvers.ml" 16 337 362 "solvers.ml" 16 337 363
+type(
+  int
+)
+"solvers.ml" 16 337 358 "solvers.ml" 16 337 363
+type(
+  int Batteries.ref
+)
+type(
+  int Batteries.ref
+)
+"solvers.ml" 18 370 374 "solvers.ml" 18 370 379
+type(
+  (Lacaml.D.vec -> float -> Lacaml.D.vec -> unit) ->
+  (Lacaml.D.vec -> float -> Lacaml.D.mat -> unit) ->
+  tridiag option ->
+  Lacaml.D.vec -> float -> float -> float array * Lacaml.D.vec array
+)
+ident(
+  def euler "solvers.ml" 52 1512 1512 "solvers.ml" 1 0 -1
+)
+"solvers.ml" 19 381 382 "solvers.ml" 19 381 386
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  def bigF "solvers.ml" 20 419 419 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 20 419 420 "solvers.ml" 20 419 426
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.mat -> unit
+)
+ident(
+  def _bigF' "solvers.ml" 21 459 459 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 21 459 460 "solvers.ml" 21 459 468
+type(
+  tridiag option
+)
+ident(
+  def _tridiag "solvers.ml" 22 488 488 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+type(
+  Lacaml.D.vec
+)
+ident(
+  def init "solvers.ml" 23 502 502 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 23 502 503 "solvers.ml" 23 502 505
+type(
+  float
+)
+ident(
+  def dt "solvers.ml" 24 516 516 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 24 516 517 "solvers.ml" 24 516 521
+type(
+  float
+)
+ident(
+  def tmax "solvers.ml" 25 532 534 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 26 563 569 "solvers.ml" 26 563 573
+type(
+  int
+)
+ident(
+  def nmax "solvers.ml" 27 613 615 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 26 563 582 "solvers.ml" 26 563 586
+type(
+  float
+)
+ident(
+  int_ref tmax "solvers.ml" 24 516 517 "solvers.ml" 24 516 521
+)
+"solvers.ml" 26 563 587 "solvers.ml" 26 563 589
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( /. )
+)
+"solvers.ml" 26 563 590 "solvers.ml" 26 563 592
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 23 502 503 "solvers.ml" 23 502 505
+)
+"solvers.ml" 26 563 582 "solvers.ml" 26 563 592
+type(
+  float
+)
+"solvers.ml" 26 563 593 "solvers.ml" 26 563 595
+type(
+  float -> (float -> int) -> int
+)
+ident(
+  ext_ref Batteries.( |> )
+)
+"solvers.ml" 26 563 596 "solvers.ml" 26 563 608
+type(
+  float -> int
+)
+ident(
+  ext_ref Batteries.int_of_float
+)
+"solvers.ml" 26 563 582 "solvers.ml" 26 563 608
+type(
+  int
+)
+type(
+  int
+)
+"solvers.ml" 27 613 618 "solvers.ml" 27 613 622
+type(
+  int
+)
+ident(
+  int_ref nmax "solvers.ml" 26 563 569 "solvers.ml" 26 563 573
+)
+"solvers.ml" 27 613 623 "solvers.ml" 27 613 624
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Batteries.( < )
+)
+"solvers.ml" 27 613 625 "solvers.ml" 27 613 634
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 27 613 618 "solvers.ml" 27 613 634
+type(
+  bool
+)
+"solvers.ml" 27 613 640 "solvers.ml" 27 613 645
+type(
+  exn -> float array * Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.raise
+)
+"solvers.ml" 27 613 655 "solvers.ml" 27 613 678
+type(
+  string
+)
+"solvers.ml" 27 613 646 "solvers.ml" 27 613 679
+type(
+  exn
+)
+"solvers.ml" 27 613 640 "solvers.ml" 27 613 679
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 28 686 694 "solvers.ml" 28 686 699
+type(
+  float array
+)
+ident(
+  def tvals "solvers.ml" 30 782 786 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 29 717 723 "solvers.ml" 29 717 735
+type(
+  ?y:Lacaml__D.vec -> float -> float -> int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.linspace
+)
+"solvers.ml" 29 717 736 "solvers.ml" 29 717 738
+type(
+  float
+)
+"solvers.ml" 29 717 739 "solvers.ml" 29 717 743
+type(
+  float
+)
+ident(
+  int_ref tmax "solvers.ml" 24 516 517 "solvers.ml" 24 516 521
+)
+"solvers.ml" 29 717 723 "solvers.ml" 29 717 743
+type(
+  int -> Lacaml__D.vec
+)
+"solvers.ml" 29 717 744 "solvers.ml" 29 717 746
+type(
+  (int -> Lacaml__D.vec) -> int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Batteries.( @@ )
+)
+"solvers.ml" 29 717 747 "solvers.ml" 29 717 751
+type(
+  int -> int
+)
+ident(
+  ext_ref Batteries.succ
+)
+"solvers.ml" 29 717 752 "solvers.ml" 29 717 761
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 29 717 747 "solvers.ml" 29 717 761
+type(
+  int
+)
+"solvers.ml" 29 717 723 "solvers.ml" 29 717 761
+call(
+  stack
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 29 717 762 "solvers.ml" 29 717 764
+type(
+  Lacaml__D.vec -> (Lacaml__D.vec -> float array) -> float array
+)
+ident(
+  ext_ref Batteries.( |> )
+)
+"solvers.ml" 29 717 765 "solvers.ml" 29 717 777
+type(
+  Lacaml__D.vec -> float array
+)
+ident(
+  ext_ref Lacaml.D.Vec.to_array
+)
+"solvers.ml" 29 717 723 "solvers.ml" 29 717 777
+call(
+  stack
+)
+type(
+  float array
+)
+type(
+  float array
+)
+"solvers.ml" 30 782 790 "solvers.ml" 30 782 795
+type(
+  Lacaml.D.vec array
+)
+ident(
+  def xvals "solvers.ml" 32 866 870 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 31 811 817 "solvers.ml" 31 811 827
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 31 811 828 "solvers.ml" 31 811 829
+type(
+  int
+)
+"solvers.ml" 31 811 817 "solvers.ml" 31 811 829
+call(
+  stack
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 31 811 830 "solvers.ml" 31 811 832
+type(
+  Lacaml__D.vec ->
+  (Lacaml__D.vec -> Lacaml.D.vec array) -> Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.( |> )
+)
+"solvers.ml" 31 811 833 "solvers.ml" 31 811 843
+type(
+  int -> Lacaml__D.vec -> Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.Array.make
+)
+"solvers.ml" 31 811 844 "solvers.ml" 31 811 846
+type(
+  (int -> Lacaml__D.vec -> Lacaml.D.vec array) ->
+  int -> Lacaml__D.vec -> Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.( @@ )
+)
+"solvers.ml" 31 811 847 "solvers.ml" 31 811 851
+type(
+  int -> int
+)
+ident(
+  ext_ref Batteries.succ
+)
+"solvers.ml" 31 811 852 "solvers.ml" 31 811 861
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 31 811 847 "solvers.ml" 31 811 861
+type(
+  int
+)
+"solvers.ml" 31 811 833 "solvers.ml" 31 811 861
+type(
+  Lacaml__D.vec -> Lacaml.D.vec array
+)
+"solvers.ml" 31 811 817 "solvers.ml" 31 811 861
+type(
+  Lacaml.D.vec array
+)
+type(
+  Lacaml.D.vec array
+)
+"solvers.ml" 32 866 874 "solvers.ml" 32 866 882
+type(
+  int Batteries.ref
+)
+ident(
+  def xcounter "solvers.ml" 33 905 909 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 32 866 895 "solvers.ml" 32 866 898
+type(
+  int -> int Batteries.ref
+)
+ident(
+  ext_ref Batteries.ref
+)
+"solvers.ml" 32 866 899 "solvers.ml" 32 866 900
+type(
+  int
+)
+"solvers.ml" 32 866 895 "solvers.ml" 32 866 900
+type(
+  int Batteries.ref
+)
+type(
+  int Batteries.ref
+)
+"solvers.ml" 33 905 913 "solvers.ml" 33 905 915
+type(
+  Lacaml.D.vec
+)
+ident(
+  def iF "solvers.ml" 34 955 959 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 33 905 924 "solvers.ml" 33 905 934
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 33 905 935 "solvers.ml" 33 905 937
+type(
+  (int -> Lacaml__D.vec) -> int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Batteries.( @@ )
+)
+"solvers.ml" 33 905 938 "solvers.ml" 33 905 945
+type(
+  Lacaml__D.vec -> int
+)
+ident(
+  ext_ref Lacaml.D.Vec.dim
+)
+"solvers.ml" 33 905 946 "solvers.ml" 33 905 950
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 33 905 938 "solvers.ml" 33 905 950
+call(
+  stack
+)
+type(
+  int
+)
+"solvers.ml" 33 905 924 "solvers.ml" 33 905 950
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 34 955 963 "solvers.ml" 34 955 973
+type(
+  int
+)
+ident(
+  def gridpoints "solvers.ml" 35 1003 1007 "solvers.ml" 50 1462 1505
+)
+"solvers.ml" 34 955 982 "solvers.ml" 34 955 989
+type(
+  Lacaml__D.vec -> int
+)
+ident(
+  ext_ref Lacaml.D.Vec.dim
+)
+"solvers.ml" 34 955 990 "solvers.ml" 34 955 994
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 34 955 982 "solvers.ml" 34 955 994
+call(
+  stack
+)
+type(
+  int
+)
+"solvers.ml" 34 955 995 "solvers.ml" 34 955 996
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( / )
+)
+"solvers.ml" 34 955 997 "solvers.ml" 34 955 998
+type(
+  int
+)
+"solvers.ml" 34 955 982 "solvers.ml" 34 955 998
+type(
+  int
+)
+type(
+  int
+)
+"solvers.ml" 35 1003 1007 "solvers.ml" 35 1003 1012
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 30 782 790 "solvers.ml" 30 782 795
+)
+"solvers.ml" 35 1003 1014 "solvers.ml" 35 1003 1015
+type(
+  int
+)
+"solvers.ml" 35 1003 1020 "solvers.ml" 35 1003 1024
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 35 1003 1025 "solvers.ml" 35 1003 1029
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 35 1003 1020 "solvers.ml" 35 1003 1029
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 35 1003 1007 "solvers.ml" 35 1003 1029
+type(
+  unit
+)
+"solvers.ml" 36 1032 1044 "solvers.ml" 36 1032 1045
+type(
+  int
+)
+"solvers.ml" 36 1032 1049 "solvers.ml" 36 1032 1053
+type(
+  int
+)
+ident(
+  int_ref nmax "solvers.ml" 26 563 569 "solvers.ml" 26 563 573
+)
+"solvers.ml" 37 1058 1068 "solvers.ml" 37 1058 1069
+type(
+  float
+)
+ident(
+  def t "solvers.ml" 38 1105 1111 "solvers.ml" 48 1438 1449
+)
+"solvers.ml" 37 1058 1080 "solvers.ml" 37 1058 1092
+type(
+  int -> float
+)
+ident(
+  ext_ref Batteries.float_of_int
+)
+"solvers.ml" 37 1058 1093 "solvers.ml" 37 1058 1094
+type(
+  int
+)
+ident(
+  int_ref n "solvers.ml" 36 1032 1036 "solvers.ml" 49 1451 1459
+)
+"solvers.ml" 37 1058 1080 "solvers.ml" 37 1058 1094
+type(
+  float
+)
+"solvers.ml" 37 1058 1095 "solvers.ml" 37 1058 1097
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( *. )
+)
+"solvers.ml" 37 1058 1098 "solvers.ml" 37 1058 1100
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 23 502 503 "solvers.ml" 23 502 505
+)
+"solvers.ml" 37 1058 1080 "solvers.ml" 37 1058 1100
+type(
+  float
+)
+type(
+  float
+)
+"solvers.ml" 38 1105 1111 "solvers.ml" 38 1105 1115
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  int_ref bigF "solvers.ml" 19 381 382 "solvers.ml" 19 381 386
+)
+"solvers.ml" 38 1105 1116 "solvers.ml" 38 1105 1120
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 38 1105 1121 "solvers.ml" 38 1105 1122
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 37 1058 1068 "solvers.ml" 37 1058 1069
+)
+"solvers.ml" 38 1105 1123 "solvers.ml" 38 1105 1125
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref iF "solvers.ml" 33 905 913 "solvers.ml" 33 905 915
+)
+"solvers.ml" 38 1105 1111 "solvers.ml" 38 1105 1125
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 39 1128 1134 "solvers.ml" 39 1128 1138
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"solvers.ml" 39 1128 1146 "solvers.ml" 39 1128 1148
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 23 502 503 "solvers.ml" 23 502 505
+)
+"solvers.ml" 39 1128 1149 "solvers.ml" 39 1128 1151
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref iF "solvers.ml" 33 905 913 "solvers.ml" 33 905 915
+)
+"solvers.ml" 39 1128 1152 "solvers.ml" 39 1128 1156
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 39 1128 1134 "solvers.ml" 39 1128 1156
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 40 1159 1168 "solvers.ml" 40 1159 1169
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 37 1058 1068 "solvers.ml" 37 1058 1069
+)
+"solvers.ml" 40 1159 1170 "solvers.ml" 40 1159 1172
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Batteries.( >= )
+)
+"solvers.ml" 40 1159 1173 "solvers.ml" 40 1159 1178
+type(
+  float array
+)
+ident(
+  int_ref tvals "solvers.ml" 28 686 694 "solvers.ml" 28 686 699
+)
+"solvers.ml" 40 1159 1180 "solvers.ml" 40 1159 1181
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 40 1159 1181 "solvers.ml" 40 1159 1189
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 32 866 874 "solvers.ml" 32 866 882
+)
+"solvers.ml" 40 1159 1180 "solvers.ml" 40 1159 1189
+type(
+  int
+)
+"solvers.ml" 40 1159 1173 "solvers.ml" 40 1159 1190
+type(
+  float
+)
+"solvers.ml" 40 1159 1168 "solvers.ml" 40 1159 1190
+type(
+  bool
+)
+"solvers.ml" 42 1212 1222 "solvers.ml" 42 1212 1227
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 30 782 790 "solvers.ml" 30 782 795
+)
+"solvers.ml" 42 1212 1229 "solvers.ml" 42 1212 1230
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 42 1212 1230 "solvers.ml" 42 1212 1238
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 32 866 874 "solvers.ml" 32 866 882
+)
+"solvers.ml" 42 1212 1229 "solvers.ml" 42 1212 1238
+type(
+  int
+)
+"solvers.ml" 42 1212 1243 "solvers.ml" 42 1212 1247
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 42 1212 1248 "solvers.ml" 42 1212 1252
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 42 1212 1243 "solvers.ml" 42 1212 1252
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 42 1212 1222 "solvers.ml" 42 1212 1252
+type(
+  unit
+)
+"solvers.ml" 42 1212 1254 "solvers.ml" 42 1212 1262
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 32 866 874 "solvers.ml" 32 866 882
+)
+"solvers.ml" 42 1212 1263 "solvers.ml" 42 1212 1265
+type(
+  int Batteries.ref -> int -> unit
+)
+ident(
+  ext_ref Batteries.( := )
+)
+"solvers.ml" 42 1212 1266 "solvers.ml" 42 1212 1267
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 42 1212 1267 "solvers.ml" 42 1212 1275
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 32 866 874 "solvers.ml" 32 866 882
+)
+"solvers.ml" 42 1212 1266 "solvers.ml" 42 1212 1275
+type(
+  int
+)
+"solvers.ml" 42 1212 1276 "solvers.ml" 42 1212 1277
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( + )
+)
+"solvers.ml" 42 1212 1278 "solvers.ml" 42 1212 1279
+type(
+  int
+)
+"solvers.ml" 42 1212 1266 "solvers.ml" 42 1212 1279
+type(
+  int
+)
+"solvers.ml" 42 1212 1254 "solvers.ml" 42 1212 1279
+type(
+  unit
+)
+"solvers.ml" 41 1197 1205 "solvers.ml" 43 1281 1292
+type(
+  unit
+)
+"solvers.ml" 40 1159 1165 "solvers.ml" 43 1281 1292
+type(
+  unit
+)
+"solvers.ml" 44 1295 1304 "solvers.ml" 44 1295 1305
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 37 1058 1068 "solvers.ml" 37 1058 1069
+)
+"solvers.ml" 44 1295 1306 "solvers.ml" 44 1295 1308
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Batteries.( >= )
+)
+"solvers.ml" 44 1295 1309 "solvers.ml" 44 1295 1321
+type(
+  int -> float
+)
+ident(
+  ext_ref Batteries.float_of_int
+)
+"solvers.ml" 44 1295 1322 "solvers.ml" 44 1295 1323
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 44 1295 1323 "solvers.ml" 44 1295 1327
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref kick "solvers.ml" 16 337 341 "solvers.ml" 16 337 345
+)
+"solvers.ml" 44 1295 1322 "solvers.ml" 44 1295 1327
+type(
+  int
+)
+"solvers.ml" 44 1295 1309 "solvers.ml" 44 1295 1327
+type(
+  float
+)
+"solvers.ml" 44 1295 1328 "solvers.ml" 44 1295 1330
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( *. )
+)
+"solvers.ml" 44 1295 1331 "solvers.ml" 44 1295 1335
+type(
+  float
+)
+"solvers.ml" 44 1295 1309 "solvers.ml" 44 1295 1335
+type(
+  float
+)
+"solvers.ml" 44 1295 1304 "solvers.ml" 44 1295 1335
+type(
+  bool
+)
+"solvers.ml" 46 1357 1367 "solvers.ml" 46 1357 1375
+type(
+  ?n:int -> ?ofsx:int -> ?incx:int -> Lacaml__D.vec -> float -> unit
+)
+ident(
+  ext_ref Lacaml.D.Vec.fill
+)
+"solvers.ml" 46 1357 1380 "solvers.ml" 46 1357 1390
+type(
+  int
+)
+ident(
+  int_ref gridpoints "solvers.ml" 34 955 963 "solvers.ml" 34 955 973
+)
+"solvers.ml" 46 1357 1391 "solvers.ml" 46 1357 1392
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( / )
+)
+"solvers.ml" 46 1357 1393 "solvers.ml" 46 1357 1395
+type(
+  int
+)
+"solvers.ml" 46 1357 1379 "solvers.ml" 46 1357 1396
+type(
+  int
+)
+"solvers.ml" 46 1357 1397 "solvers.ml" 46 1357 1401
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 46 1357 1402 "solvers.ml" 46 1357 1405
+type(
+  float
+)
+"solvers.ml" 46 1357 1367 "solvers.ml" 46 1357 1405
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 47 1408 1418 "solvers.ml" 47 1408 1422
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref kick "solvers.ml" 16 337 341 "solvers.ml" 16 337 345
+)
+"solvers.ml" 47 1408 1423 "solvers.ml" 47 1408 1425
+type(
+  int Batteries.ref -> int -> unit
+)
+ident(
+  ext_ref Batteries.( := )
+)
+"solvers.ml" 47 1408 1426 "solvers.ml" 47 1408 1430
+type(
+  int -> int
+)
+ident(
+  ext_ref Batteries.succ
+)
+"solvers.ml" 47 1408 1431 "solvers.ml" 47 1408 1432
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 47 1408 1432 "solvers.ml" 47 1408 1436
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref kick "solvers.ml" 16 337 341 "solvers.ml" 16 337 345
+)
+"solvers.ml" 47 1408 1431 "solvers.ml" 47 1408 1436
+type(
+  int
+)
+"solvers.ml" 47 1408 1426 "solvers.ml" 47 1408 1436
+type(
+  int
+)
+"solvers.ml" 47 1408 1418 "solvers.ml" 47 1408 1436
+type(
+  unit
+)
+"solvers.ml" 45 1342 1350 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 44 1295 1301 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 40 1159 1165 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 39 1128 1134 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 38 1105 1111 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 37 1058 1064 "solvers.ml" 48 1438 1449
+type(
+  unit
+)
+"solvers.ml" 36 1032 1036 "solvers.ml" 49 1451 1459
+type(
+  unit
+)
+"solvers.ml" 50 1462 1466 "solvers.ml" 50 1462 1471
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 30 782 790 "solvers.ml" 30 782 795
+)
+"solvers.ml" 50 1462 1473 "solvers.ml" 50 1462 1482
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 50 1462 1487 "solvers.ml" 50 1462 1491
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 22 488 489 "solvers.ml" 22 488 493
+)
+"solvers.ml" 50 1462 1466 "solvers.ml" 50 1462 1491
+type(
+  unit
+)
+"solvers.ml" 50 1462 1493 "solvers.ml" 50 1462 1498
+type(
+  float array
+)
+ident(
+  int_ref tvals "solvers.ml" 28 686 694 "solvers.ml" 28 686 699
+)
+"solvers.ml" 50 1462 1500 "solvers.ml" 50 1462 1505
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 30 782 790 "solvers.ml" 30 782 795
+)
+"solvers.ml" 50 1462 1493 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 50 1462 1466 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 36 1032 1036 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 35 1003 1007 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 34 955 959 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 33 905 909 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 32 866 870 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 30 782 786 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 28 686 690 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 27 613 615 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 26 563 565 "solvers.ml" 50 1462 1505
+type(
+  float array * Lacaml.D.vec array
+)
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 52 1512 1516 "solvers.ml" 52 1512 1520
+type(
+  (Lacaml.D.vec -> float -> Lacaml.D.vec -> unit) ->
+  (Lacaml.D.vec -> float -> Lacaml.D.mat -> unit) ->
+  tridiag option ->
+  Lacaml.D.vec -> float -> float -> float array * Lacaml.D.vec array
+)
+ident(
+  def trap "solvers.ml" 100 3467 3467 "solvers.ml" 1 0 -1
+)
+"solvers.ml" 53 1522 1523 "solvers.ml" 53 1522 1527
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  def bigF "solvers.ml" 54 1560 1560 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 54 1560 1561 "solvers.ml" 54 1560 1566
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.mat -> unit
+)
+ident(
+  def bigF' "solvers.ml" 55 1599 1599 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 55 1599 1600 "solvers.ml" 55 1599 1607
+type(
+  tridiag option
+)
+ident(
+  def tridiag "solvers.ml" 56 1627 1627 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+type(
+  Lacaml.D.vec
+)
+ident(
+  def init "solvers.ml" 57 1641 1641 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+type(
+  float
+)
+ident(
+  def dt "solvers.ml" 58 1655 1655 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 58 1655 1656 "solvers.ml" 58 1655 1660
+type(
+  float
+)
+ident(
+  def tmax "solvers.ml" 59 1671 1673 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 60 1702 1708 "solvers.ml" 60 1702 1712
+type(
+  int
+)
+ident(
+  def nmax "solvers.ml" 61 1752 1754 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 60 1702 1721 "solvers.ml" 60 1702 1725
+type(
+  float
+)
+ident(
+  int_ref tmax "solvers.ml" 58 1655 1656 "solvers.ml" 58 1655 1660
+)
+"solvers.ml" 60 1702 1726 "solvers.ml" 60 1702 1728
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( /. )
+)
+"solvers.ml" 60 1702 1729 "solvers.ml" 60 1702 1731
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+)
+"solvers.ml" 60 1702 1721 "solvers.ml" 60 1702 1731
+type(
+  float
+)
+"solvers.ml" 60 1702 1732 "solvers.ml" 60 1702 1734
+type(
+  float -> (float -> int) -> int
+)
+ident(
+  ext_ref Batteries.( |> )
+)
+"solvers.ml" 60 1702 1735 "solvers.ml" 60 1702 1747
+type(
+  float -> int
+)
+ident(
+  ext_ref Batteries.int_of_float
+)
+"solvers.ml" 60 1702 1721 "solvers.ml" 60 1702 1747
+type(
+  int
+)
+type(
+  int
+)
+"solvers.ml" 61 1752 1757 "solvers.ml" 61 1752 1761
+type(
+  int
+)
+ident(
+  int_ref nmax "solvers.ml" 60 1702 1708 "solvers.ml" 60 1702 1712
+)
+"solvers.ml" 61 1752 1762 "solvers.ml" 61 1752 1763
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Batteries.( < )
+)
+"solvers.ml" 61 1752 1764 "solvers.ml" 61 1752 1773
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 61 1752 1757 "solvers.ml" 61 1752 1773
+type(
+  bool
+)
+"solvers.ml" 61 1752 1779 "solvers.ml" 61 1752 1784
+type(
+  exn -> float array * Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.raise
+)
+"solvers.ml" 61 1752 1794 "solvers.ml" 61 1752 1817
+type(
+  string
+)
+"solvers.ml" 61 1752 1785 "solvers.ml" 61 1752 1818
+type(
+  exn
+)
+"solvers.ml" 61 1752 1779 "solvers.ml" 61 1752 1818
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 62 1825 1833 "solvers.ml" 62 1825 1838
+type(
+  float array
+)
+ident(
+  def tvals "solvers.ml" 64 1919 1923 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 63 1856 1862 "solvers.ml" 63 1856 1874
+type(
+  ?y:Lacaml__D.vec -> float -> float -> int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.linspace
+)
+"solvers.ml" 63 1856 1875 "solvers.ml" 63 1856 1877
+type(
+  float
+)
+"solvers.ml" 63 1856 1878 "solvers.ml" 63 1856 1882
+type(
+  float
+)
+ident(
+  int_ref tmax "solvers.ml" 58 1655 1656 "solvers.ml" 58 1655 1660
+)
+"solvers.ml" 63 1856 1884 "solvers.ml" 63 1856 1893
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 63 1856 1894 "solvers.ml" 63 1856 1895
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( + )
+)
+"solvers.ml" 63 1856 1896 "solvers.ml" 63 1856 1897
+type(
+  int
+)
+"solvers.ml" 63 1856 1883 "solvers.ml" 63 1856 1898
+type(
+  int
+)
+"solvers.ml" 63 1856 1862 "solvers.ml" 63 1856 1898
+call(
+  stack
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 63 1856 1899 "solvers.ml" 63 1856 1901
+type(
+  Lacaml__D.vec -> (Lacaml__D.vec -> float array) -> float array
+)
+ident(
+  ext_ref Batteries.( |> )
+)
+"solvers.ml" 63 1856 1902 "solvers.ml" 63 1856 1914
+type(
+  Lacaml__D.vec -> float array
+)
+ident(
+  ext_ref Lacaml.D.Vec.to_array
+)
+"solvers.ml" 63 1856 1862 "solvers.ml" 63 1856 1914
+call(
+  stack
+)
+type(
+  float array
+)
+type(
+  float array
+)
+"solvers.ml" 64 1919 1927 "solvers.ml" 64 1919 1932
+type(
+  Lacaml.D.vec array
+)
+ident(
+  def xvals "solvers.ml" 66 2015 2019 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 65 1948 1954 "solvers.ml" 65 1948 1964
+type(
+  int -> Lacaml__D.vec -> Lacaml.D.vec array
+)
+ident(
+  ext_ref Batteries.Array.make
+)
+"solvers.ml" 65 1948 1966 "solvers.ml" 65 1948 1970
+type(
+  int -> int
+)
+ident(
+  ext_ref Batteries.succ
+)
+"solvers.ml" 65 1948 1971 "solvers.ml" 65 1948 1980
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 65 1948 1965 "solvers.ml" 65 1948 1981
+type(
+  int
+)
+"solvers.ml" 65 1948 1983 "solvers.ml" 65 1948 1993
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 65 1948 1994 "solvers.ml" 65 1948 1996
+type(
+  (int -> Lacaml__D.vec) -> int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Batteries.( @@ )
+)
+"solvers.ml" 65 1948 1997 "solvers.ml" 65 1948 2004
+type(
+  Lacaml__D.vec -> int
+)
+ident(
+  ext_ref Lacaml.D.Vec.dim
+)
+"solvers.ml" 65 1948 2005 "solvers.ml" 65 1948 2009
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 65 1948 1997 "solvers.ml" 65 1948 2009
+call(
+  stack
+)
+type(
+  int
+)
+"solvers.ml" 65 1948 1982 "solvers.ml" 65 1948 2010
+call(
+  stack
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 65 1948 1954 "solvers.ml" 65 1948 2010
+type(
+  Lacaml.D.vec array
+)
+type(
+  Lacaml.D.vec array
+)
+"solvers.ml" 66 2015 2023 "solvers.ml" 66 2015 2031
+type(
+  int Batteries.ref
+)
+ident(
+  def xcounter "solvers.ml" 67 2054 2058 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 66 2015 2044 "solvers.ml" 66 2015 2047
+type(
+  int -> int Batteries.ref
+)
+ident(
+  ext_ref Batteries.ref
+)
+"solvers.ml" 66 2015 2048 "solvers.ml" 66 2015 2049
+type(
+  int
+)
+"solvers.ml" 66 2015 2044 "solvers.ml" 66 2015 2049
+type(
+  int Batteries.ref
+)
+type(
+  int Batteries.ref
+)
+"solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+type(
+  int
+)
+ident(
+  def d "solvers.ml" 68 2089 2093 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 67 2054 2072 "solvers.ml" 67 2054 2079
+type(
+  Lacaml__D.vec -> int
+)
+ident(
+  ext_ref Lacaml.D.Vec.dim
+)
+"solvers.ml" 67 2054 2080 "solvers.ml" 67 2054 2084
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 67 2054 2072 "solvers.ml" 67 2054 2084
+call(
+  stack
+)
+type(
+  int
+)
+type(
+  int
+)
+"solvers.ml" 68 2089 2097 "solvers.ml" 68 2089 2099
+type(
+  Lacaml.D.vec
+)
+ident(
+  def iF "solvers.ml" 69 2125 2129 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 68 2089 2108 "solvers.ml" 68 2089 2118
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 68 2089 2119 "solvers.ml" 68 2089 2120
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 68 2089 2108 "solvers.ml" 68 2089 2120
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 69 2125 2133 "solvers.ml" 69 2125 2138
+type(
+  Lacaml.D.vec
+)
+ident(
+  def guess "solvers.ml" 70 2161 2165 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 69 2125 2147 "solvers.ml" 69 2125 2151
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 69 2125 2152 "solvers.ml" 69 2125 2156
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 69 2125 2147 "solvers.ml" 69 2125 2156
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 70 2161 2169 "solvers.ml" 70 2161 2175
+type(
+  Lacaml.D.vec
+)
+ident(
+  def guessF "solvers.ml" 71 2201 2205 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 70 2161 2184 "solvers.ml" 70 2161 2194
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 70 2161 2195 "solvers.ml" 70 2161 2196
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 70 2161 2184 "solvers.ml" 70 2161 2196
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 71 2201 2209 "solvers.ml" 71 2201 2215
+type(
+  Lacaml.D.vec
+)
+ident(
+  def guessg "solvers.ml" 72 2241 2245 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 71 2201 2224 "solvers.ml" 71 2201 2234
+type(
+  int -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.create
+)
+"solvers.ml" 71 2201 2235 "solvers.ml" 71 2201 2236
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 71 2201 2224 "solvers.ml" 71 2201 2236
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 72 2241 2249 "solvers.ml" 72 2241 2258
+type(
+  Lacaml.D.mat
+)
+ident(
+  def guessgmat "solvers.ml" 73 2295 2299 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 72 2241 2267 "solvers.ml" 72 2241 2283
+type(
+  Lacaml__D.vec -> Lacaml__D.mat
+)
+ident(
+  ext_ref Lacaml.D.Mat.from_col_vec
+)
+"solvers.ml" 72 2241 2284 "solvers.ml" 72 2241 2290
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessg "solvers.ml" 71 2201 2209 "solvers.ml" 71 2201 2215
+)
+"solvers.ml" 72 2241 2267 "solvers.ml" 72 2241 2290
+call(
+  stack
+)
+type(
+  Lacaml.D.mat
+)
+type(
+  Lacaml__D.mat
+)
+"solvers.ml" 73 2295 2303 "solvers.ml" 73 2295 2307
+type(
+  Lacaml.D.mat
+)
+ident(
+  def iden "solvers.ml" 74 2335 2339 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 73 2295 2316 "solvers.ml" 73 2295 2328
+type(
+  int -> Lacaml__D.mat
+)
+ident(
+  ext_ref Lacaml.D.Mat.identity
+)
+"solvers.ml" 73 2295 2329 "solvers.ml" 73 2295 2330
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 73 2295 2316 "solvers.ml" 73 2295 2330
+call(
+  stack
+)
+type(
+  Lacaml.D.mat
+)
+type(
+  Lacaml__D.mat
+)
+"solvers.ml" 74 2335 2343 "solvers.ml" 74 2335 2349
+type(
+  Lacaml.D.vec
+)
+ident(
+  def onevec "solvers.ml" 75 2376 2380 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 74 2335 2358 "solvers.ml" 74 2335 2366
+type(
+  int -> float -> Lacaml__D.vec
+)
+ident(
+  ext_ref Lacaml.D.Vec.make
+)
+"solvers.ml" 74 2335 2367 "solvers.ml" 74 2335 2368
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 74 2335 2369 "solvers.ml" 74 2335 2371
+type(
+  float
+)
+"solvers.ml" 74 2335 2358 "solvers.ml" 74 2335 2371
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 75 2376 2384 "solvers.ml" 75 2376 2391
+type(
+  Lacaml.D.mat
+)
+ident(
+  def guessG' "solvers.ml" 76 2419 2423 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 75 2376 2400 "solvers.ml" 75 2376 2410
+type(
+  int -> int -> Lacaml__D.mat
+)
+ident(
+  ext_ref Lacaml.D.Mat.create
+)
+"solvers.ml" 75 2376 2411 "solvers.ml" 75 2376 2412
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 75 2376 2413 "solvers.ml" 75 2376 2414
+type(
+  int
+)
+ident(
+  int_ref d "solvers.ml" 67 2054 2062 "solvers.ml" 67 2054 2063
+)
+"solvers.ml" 75 2376 2400 "solvers.ml" 75 2376 2414
+call(
+  stack
+)
+type(
+  Lacaml.D.mat
+)
+type(
+  Lacaml__D.mat
+)
+"solvers.ml" 76 2419 2431 "solvers.ml" 76 2419 2435
+type(
+  int -> unit
+)
+ident(
+  def loop "solvers.ml" 76 2419 2423 "solvers.ml" 98 3417 3460
+)
+"solvers.ml" 76 2419 2437 "solvers.ml" 76 2419 2438
+type(
+  int
+)
+ident(
+  def n "solvers.ml" 76 2419 2446 "solvers.ml" 96 3337 3358
+)
+"solvers.ml" 77 2456 2466 "solvers.ml" 77 2456 2467
+type(
+  float
+)
+ident(
+  def t "solvers.ml" 78 2503 2509 "solvers.ml" 96 3337 3358
+)
+"solvers.ml" 77 2456 2478 "solvers.ml" 77 2456 2490
+type(
+  int -> float
+)
+ident(
+  ext_ref Batteries.float_of_int
+)
+"solvers.ml" 77 2456 2491 "solvers.ml" 77 2456 2492
+type(
+  int
+)
+ident(
+  int_ref n "solvers.ml" 76 2419 2437 "solvers.ml" 76 2419 2438
+)
+"solvers.ml" 77 2456 2478 "solvers.ml" 77 2456 2492
+type(
+  float
+)
+"solvers.ml" 77 2456 2493 "solvers.ml" 77 2456 2495
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( *. )
+)
+"solvers.ml" 77 2456 2496 "solvers.ml" 77 2456 2498
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+)
+"solvers.ml" 77 2456 2478 "solvers.ml" 77 2456 2498
+type(
+  float
+)
+type(
+  float
+)
+"solvers.ml" 78 2503 2513 "solvers.ml" 78 2503 2517
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  def bigG "solvers.ml" 83 2685 2691 "solvers.ml" 96 3337 3358
+)
+"solvers.ml" 78 2503 2519 "solvers.ml" 78 2503 2523
+type(
+  Lacaml.D.vec
+)
+ident(
+  def xvec "solvers.ml" 78 2503 2531 "solvers.ml" 82 2666 2680
+)
+"solvers.ml" 79 2540 2548 "solvers.ml" 79 2540 2552
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  int_ref bigF "solvers.ml" 53 1522 1523 "solvers.ml" 53 1522 1527
+)
+"solvers.ml" 79 2540 2553 "solvers.ml" 79 2540 2557
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref xvec "solvers.ml" 78 2503 2519 "solvers.ml" 78 2503 2523
+)
+"solvers.ml" 79 2540 2558 "solvers.ml" 79 2540 2559
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 77 2456 2466 "solvers.ml" 77 2456 2467
+)
+"solvers.ml" 79 2540 2560 "solvers.ml" 79 2540 2566
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessF "solvers.ml" 70 2161 2169 "solvers.ml" 70 2161 2175
+)
+"solvers.ml" 79 2540 2548 "solvers.ml" 79 2540 2566
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 80 2569 2577 "solvers.ml" 80 2569 2581
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"solvers.ml" 80 2569 2582 "solvers.ml" 80 2569 2584
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref iF "solvers.ml" 68 2089 2097 "solvers.ml" 68 2089 2099
+)
+"solvers.ml" 80 2569 2585 "solvers.ml" 80 2569 2591
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessF "solvers.ml" 70 2161 2169 "solvers.ml" 70 2161 2175
+)
+"solvers.ml" 80 2569 2577 "solvers.ml" 80 2569 2591
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 81 2594 2602 "solvers.ml" 81 2594 2606
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"solvers.ml" 81 2594 2615 "solvers.ml" 81 2594 2617
+type(
+  float -> float
+)
+ident(
+  ext_ref Batteries.( ~-. )
+)
+"solvers.ml" 81 2594 2617 "solvers.ml" 81 2594 2619
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+)
+"solvers.ml" 81 2594 2615 "solvers.ml" 81 2594 2619
+type(
+  float
+)
+"solvers.ml" 81 2594 2620 "solvers.ml" 81 2594 2622
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( /. )
+)
+"solvers.ml" 81 2594 2623 "solvers.ml" 81 2594 2625
+type(
+  float
+)
+"solvers.ml" 81 2594 2614 "solvers.ml" 81 2594 2626
+type(
+  float
+)
+"solvers.ml" 81 2594 2627 "solvers.ml" 81 2594 2633
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessF "solvers.ml" 70 2161 2169 "solvers.ml" 70 2161 2175
+)
+"solvers.ml" 81 2594 2635 "solvers.ml" 81 2594 2642
+type(
+  Lacaml.D.Vec.binop
+)
+ident(
+  ext_ref Lacaml.D.Vec.sub
+)
+"solvers.ml" 81 2594 2646 "solvers.ml" 81 2594 2652
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessg "solvers.ml" 71 2201 2209 "solvers.ml" 71 2201 2215
+)
+"solvers.ml" 81 2594 2653 "solvers.ml" 81 2594 2657
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref xvec "solvers.ml" 78 2503 2519 "solvers.ml" 78 2503 2523
+)
+"solvers.ml" 81 2594 2658 "solvers.ml" 81 2594 2662
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 81 2594 2634 "solvers.ml" 81 2594 2663
+call(
+  stack
+)
+type(
+  Lacaml__D.vec
+)
+"solvers.ml" 81 2594 2602 "solvers.ml" 81 2594 2663
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 82 2666 2674 "solvers.ml" 82 2666 2680
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guessg "solvers.ml" 71 2201 2209 "solvers.ml" 71 2201 2215
+)
+"solvers.ml" 81 2594 2602 "solvers.ml" 82 2666 2680
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 80 2569 2577 "solvers.ml" 82 2666 2680
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 79 2540 2548 "solvers.ml" 82 2666 2680
+type(
+  Lacaml.D.vec
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 83 2685 2695 "solvers.ml" 83 2685 2700
+type(
+  Lacaml.D.vec -> Lacaml.D.mat
+)
+ident(
+  def bigG' "solvers.ml" 86 2828 2834 "solvers.ml" 96 3337 3358
+)
+"solvers.ml" 83 2685 2702 "solvers.ml" 83 2685 2706
+type(
+  Lacaml.D.vec
+)
+ident(
+  def xvec "solvers.ml" 83 2685 2714 "solvers.ml" 85 2785 2823
+)
+"solvers.ml" 84 2723 2731 "solvers.ml" 84 2723 2736
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.mat -> unit
+)
+ident(
+  int_ref bigF' "solvers.ml" 54 1560 1561 "solvers.ml" 54 1560 1566
+)
+"solvers.ml" 84 2723 2737 "solvers.ml" 84 2723 2741
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref xvec "solvers.ml" 83 2685 2702 "solvers.ml" 83 2685 2706
+)
+"solvers.ml" 84 2723 2742 "solvers.ml" 84 2723 2743
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 77 2456 2466 "solvers.ml" 77 2456 2467
+)
+"solvers.ml" 84 2723 2744 "solvers.ml" 84 2723 2751
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref guessG' "solvers.ml" 75 2376 2384 "solvers.ml" 75 2376 2391
+)
+"solvers.ml" 84 2723 2731 "solvers.ml" 84 2723 2751
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 84 2723 2753 "solvers.ml" 84 2723 2761
+type(
+  ?m:int -> ?n:int -> float -> ?ar:int -> ?ac:int -> Lacaml__D.mat -> unit
+)
+ident(
+  ext_ref Lacaml.D.Mat.scal
+)
+"solvers.ml" 84 2723 2763 "solvers.ml" 84 2723 2765
+type(
+  float -> float
+)
+ident(
+  ext_ref Batteries.( ~-. )
+)
+"solvers.ml" 84 2723 2765 "solvers.ml" 84 2723 2767
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+)
+"solvers.ml" 84 2723 2763 "solvers.ml" 84 2723 2767
+type(
+  float
+)
+"solvers.ml" 84 2723 2768 "solvers.ml" 84 2723 2770
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( /. )
+)
+"solvers.ml" 84 2723 2771 "solvers.ml" 84 2723 2773
+type(
+  float
+)
+"solvers.ml" 84 2723 2762 "solvers.ml" 84 2723 2774
+type(
+  float
+)
+"solvers.ml" 84 2723 2775 "solvers.ml" 84 2723 2782
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref guessG' "solvers.ml" 75 2376 2384 "solvers.ml" 75 2376 2391
+)
+"solvers.ml" 84 2723 2753 "solvers.ml" 84 2723 2782
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 85 2785 2793 "solvers.ml" 85 2785 2801
+type(
+  ?alpha:float ->
+  ?m:int ->
+  ?n:int ->
+  ?xr:int ->
+  ?xc:int -> Lacaml__D.mat -> ?yr:int -> ?yc:int -> Lacaml__D.mat -> unit
+)
+ident(
+  ext_ref Lacaml.D.Mat.axpy
+)
+"solvers.ml" 85 2785 2802 "solvers.ml" 85 2785 2806
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref iden "solvers.ml" 73 2295 2303 "solvers.ml" 73 2295 2307
+)
+"solvers.ml" 85 2785 2807 "solvers.ml" 85 2785 2814
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref guessG' "solvers.ml" 75 2376 2384 "solvers.ml" 75 2376 2391
+)
+"solvers.ml" 85 2785 2793 "solvers.ml" 85 2785 2814
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 85 2785 2816 "solvers.ml" 85 2785 2823
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref guessG' "solvers.ml" 75 2376 2384 "solvers.ml" 75 2376 2391
+)
+"solvers.ml" 85 2785 2793 "solvers.ml" 85 2785 2823
+type(
+  Lacaml.D.mat
+)
+"solvers.ml" 84 2723 2753 "solvers.ml" 85 2785 2823
+type(
+  Lacaml.D.mat
+)
+"solvers.ml" 84 2723 2731 "solvers.ml" 85 2785 2823
+type(
+  Lacaml.D.mat
+)
+type(
+  Lacaml.D.mat
+)
+"solvers.ml" 86 2828 2838 "solvers.ml" 86 2828 2843
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec ->
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+ident(
+  def triG' "solvers.ml" 89 3003 3009 "solvers.ml" 96 3337 3358
+)
+"solvers.ml" 86 2828 2845 "solvers.ml" 86 2828 2847
+type(
+  Lacaml.D.vec
+)
+ident(
+  def dl "solvers.ml" 86 2828 2874 "solvers.ml" 88 2966 2998
+)
+"solvers.ml" 86 2828 2849 "solvers.ml" 86 2828 2850
+type(
+  Lacaml.D.vec
+)
+ident(
+  def d "solvers.ml" 86 2828 2874 "solvers.ml" 88 2966 2998
+)
+"solvers.ml" 86 2828 2852 "solvers.ml" 86 2828 2854
+type(
+  Lacaml.D.vec
+)
+ident(
+  def du "solvers.ml" 86 2828 2874 "solvers.ml" 88 2966 2998
+)
+"solvers.ml" 86 2828 2845 "solvers.ml" 86 2828 2854
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"solvers.ml" 87 2895 2903 "solvers.ml" 87 2895 2915
+type(
+  (Lacaml.D.vec -> unit) -> Lacaml.D.vec list -> unit
+)
+ident(
+  ext_ref BatList.iter
+)
+"solvers.ml" 87 2895 2917 "solvers.ml" 87 2895 2921
+type(
+  ?n:int -> float -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.scal
+)
+"solvers.ml" 87 2895 2923 "solvers.ml" 87 2895 2925
+type(
+  float -> float
+)
+ident(
+  ext_ref Batteries.( ~-. )
+)
+"solvers.ml" 87 2895 2925 "solvers.ml" 87 2895 2927
+type(
+  float
+)
+ident(
+  int_ref dt "solvers.ml" 57 1641 1642 "solvers.ml" 57 1641 1644
+)
+"solvers.ml" 87 2895 2923 "solvers.ml" 87 2895 2927
+type(
+  float
+)
+"solvers.ml" 87 2895 2928 "solvers.ml" 87 2895 2930
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Batteries.( /. )
+)
+"solvers.ml" 87 2895 2931 "solvers.ml" 87 2895 2933
+type(
+  float
+)
+"solvers.ml" 87 2895 2922 "solvers.ml" 87 2895 2934
+type(
+  float
+)
+"solvers.ml" 87 2895 2941 "solvers.ml" 87 2895 2942
+type(
+  int
+)
+"solvers.ml" 87 2895 2949 "solvers.ml" 87 2895 2950
+type(
+  int
+)
+"solvers.ml" 87 2895 2916 "solvers.ml" 87 2895 2951
+call(
+  stack
+)
+type(
+  Lacaml.D.vec -> unit
+)
+"solvers.ml" 87 2895 2953 "solvers.ml" 87 2895 2955
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref dl "solvers.ml" 86 2828 2845 "solvers.ml" 86 2828 2847
+)
+"solvers.ml" 87 2895 2957 "solvers.ml" 87 2895 2958
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref d "solvers.ml" 86 2828 2849 "solvers.ml" 86 2828 2850
+)
+"solvers.ml" 87 2895 2960 "solvers.ml" 87 2895 2962
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref du "solvers.ml" 86 2828 2852 "solvers.ml" 86 2828 2854
+)
+"solvers.ml" 87 2895 2952 "solvers.ml" 87 2895 2963
+type(
+  Lacaml.D.vec list
+)
+"solvers.ml" 87 2895 2903 "solvers.ml" 87 2895 2963
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 88 2966 2974 "solvers.ml" 88 2966 2978
+type(
+  ?alpha:float ->
+  ?n:int ->
+  ?ofsx:int ->
+  ?incx:int -> Lacaml.D.vec -> ?ofsy:int -> ?incy:int -> Lacaml.D.vec -> unit
+)
+ident(
+  ext_ref Lacaml.D.axpy
+)
+"solvers.ml" 88 2966 2979 "solvers.ml" 88 2966 2985
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref onevec "solvers.ml" 74 2335 2343 "solvers.ml" 74 2335 2349
+)
+"solvers.ml" 88 2966 2986 "solvers.ml" 88 2966 2987
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref d "solvers.ml" 86 2828 2849 "solvers.ml" 86 2828 2850
+)
+"solvers.ml" 88 2966 2974 "solvers.ml" 88 2966 2987
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 88 2966 2989 "solvers.ml" 88 2966 2991
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref dl "solvers.ml" 86 2828 2845 "solvers.ml" 86 2828 2847
+)
+"solvers.ml" 88 2966 2993 "solvers.ml" 88 2966 2994
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref d "solvers.ml" 86 2828 2849 "solvers.ml" 86 2828 2850
+)
+"solvers.ml" 88 2966 2996 "solvers.ml" 88 2966 2998
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref du "solvers.ml" 86 2828 2852 "solvers.ml" 86 2828 2854
+)
+"solvers.ml" 88 2966 2989 "solvers.ml" 88 2966 2998
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"solvers.ml" 88 2966 2974 "solvers.ml" 88 2966 2998
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"solvers.ml" 87 2895 2903 "solvers.ml" 88 2966 2998
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"solvers.ml" 89 3003 3012 "solvers.ml" 89 3003 3013
+type(
+  int
+)
+ident(
+  int_ref n "solvers.ml" 76 2419 2437 "solvers.ml" 76 2419 2438
+)
+"solvers.ml" 89 3003 3014 "solvers.ml" 89 3003 3016
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Batteries.( <= )
+)
+"solvers.ml" 89 3003 3017 "solvers.ml" 89 3003 3021
+type(
+  int
+)
+ident(
+  int_ref nmax "solvers.ml" 60 1702 1708 "solvers.ml" 60 1702 1712
+)
+"solvers.ml" 89 3003 3012 "solvers.ml" 89 3003 3021
+type(
+  bool
+)
+"solvers.ml" 90 3028 3044 "solvers.ml" 90 3028 3051
+type(
+  tridiag option
+)
+ident(
+  int_ref tridiag "solvers.ml" 55 1599 1600 "solvers.ml" 55 1599 1607
+)
+"solvers.ml" 91 3058 3068 "solvers.ml" 91 3058 3072
+type(
+  tridiag option
+)
+"solvers.ml" 91 3058 3076 "solvers.ml" 91 3058 3091
+type(
+  (Lacaml.D.vec -> Lacaml.D.vec) ->
+  (Lacaml.D.vec -> Lacaml.D.mat) ->
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+ident(
+  ext_ref Newton.findzero
+)
+"solvers.ml" 91 3058 3092 "solvers.ml" 91 3058 3096
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  int_ref bigG "solvers.ml" 78 2503 2513 "solvers.ml" 78 2503 2517
+)
+"solvers.ml" 91 3058 3097 "solvers.ml" 91 3058 3102
+type(
+  Lacaml.D.vec -> Lacaml.D.mat
+)
+ident(
+  int_ref bigG' "solvers.ml" 83 2685 2695 "solvers.ml" 83 2685 2700
+)
+"solvers.ml" 91 3058 3076 "solvers.ml" 91 3058 3102
+call(
+  stack
+)
+type(
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+"solvers.ml" 92 3104 3119 "solvers.ml" 92 3104 3120
+type(
+  tridiag
+)
+ident(
+  def f "solvers.ml" 92 3104 3124 "solvers.ml" 92 3104 3164
+)
+"solvers.ml" 92 3104 3114 "solvers.ml" 92 3104 3120
+type(
+  tridiag option
+)
+"solvers.ml" 92 3104 3124 "solvers.ml" 92 3104 3147
+type(
+  (Lacaml.D.vec -> Lacaml.D.vec) ->
+  (Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec) ->
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+ident(
+  ext_ref Newton.findzero_tridiag
+)
+"solvers.ml" 92 3104 3148 "solvers.ml" 92 3104 3152
+type(
+  Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  int_ref bigG "solvers.ml" 78 2503 2513 "solvers.ml" 78 2503 2517
+)
+"solvers.ml" 92 3104 3154 "solvers.ml" 92 3104 3159
+type(
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec ->
+  Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+ident(
+  int_ref triG' "solvers.ml" 86 2828 2838 "solvers.ml" 86 2828 2843
+)
+"solvers.ml" 92 3104 3160 "solvers.ml" 92 3104 3161
+type(
+  (Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec ->
+   Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec) ->
+  tridiag -> Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+ident(
+  ext_ref Batteries.( % )
+)
+"solvers.ml" 92 3104 3162 "solvers.ml" 92 3104 3163
+type(
+  tridiag
+)
+ident(
+  int_ref f "solvers.ml" 92 3104 3119 "solvers.ml" 92 3104 3120
+)
+"solvers.ml" 92 3104 3153 "solvers.ml" 92 3104 3164
+call(
+  stack
+)
+type(
+  Lacaml.D.vec -> Lacaml.D.vec * Lacaml.D.vec * Lacaml.D.vec
+)
+"solvers.ml" 92 3104 3124 "solvers.ml" 92 3104 3164
+call(
+  stack
+)
+type(
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+"solvers.ml" 90 3028 3037 "solvers.ml" 92 3104 3165
+type(
+  ?tol:float -> Lacaml.D.vec -> Lacaml.D.mat -> unit
+)
+"solvers.ml" 92 3104 3166 "solvers.ml" 92 3104 3171
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "solvers.ml" 69 2125 2133 "solvers.ml" 69 2125 2138
+)
+"solvers.ml" 92 3104 3172 "solvers.ml" 92 3104 3181
+type(
+  Lacaml.D.mat
+)
+ident(
+  int_ref guessgmat "solvers.ml" 72 2241 2249 "solvers.ml" 72 2241 2258
+)
+"solvers.ml" 90 3028 3037 "solvers.ml" 92 3104 3181
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 93 3184 3192 "solvers.ml" 93 3184 3196
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  int_ref bigF "solvers.ml" 53 1522 1523 "solvers.ml" 53 1522 1527
+)
+"solvers.ml" 93 3184 3198 "solvers.ml" 93 3184 3202
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 93 3184 3206 "solvers.ml" 93 3184 3210
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 93 3184 3211 "solvers.ml" 93 3184 3216
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref guess "solvers.ml" 69 2125 2133 "solvers.ml" 69 2125 2138
+)
+"solvers.ml" 93 3184 3197 "solvers.ml" 93 3184 3217
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 93 3184 3218 "solvers.ml" 93 3184 3219
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 77 2456 2466 "solvers.ml" 77 2456 2467
+)
+"solvers.ml" 93 3184 3220 "solvers.ml" 93 3184 3222
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref iF "solvers.ml" 68 2089 2097 "solvers.ml" 68 2089 2099
+)
+"solvers.ml" 93 3184 3192 "solvers.ml" 93 3184 3222
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 94 3225 3236 "solvers.ml" 94 3225 3237
+type(
+  float
+)
+ident(
+  int_ref t "solvers.ml" 77 2456 2466 "solvers.ml" 77 2456 2467
+)
+"solvers.ml" 94 3225 3238 "solvers.ml" 94 3225 3240
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Batteries.( >= )
+)
+"solvers.ml" 94 3225 3241 "solvers.ml" 94 3225 3246
+type(
+  float array
+)
+ident(
+  int_ref tvals "solvers.ml" 62 1825 1833 "solvers.ml" 62 1825 1838
+)
+"solvers.ml" 94 3225 3248 "solvers.ml" 94 3225 3249
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 94 3225 3249 "solvers.ml" 94 3225 3257
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 66 2015 2023 "solvers.ml" 66 2015 2031
+)
+"solvers.ml" 94 3225 3248 "solvers.ml" 94 3225 3257
+type(
+  int
+)
+"solvers.ml" 94 3225 3241 "solvers.ml" 94 3225 3258
+type(
+  float
+)
+"solvers.ml" 94 3225 3236 "solvers.ml" 94 3225 3258
+type(
+  bool
+)
+"solvers.ml" 95 3260 3276 "solvers.ml" 95 3260 3281
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 64 1919 1927 "solvers.ml" 64 1919 1932
+)
+"solvers.ml" 95 3260 3283 "solvers.ml" 95 3260 3284
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 95 3260 3284 "solvers.ml" 95 3260 3292
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 66 2015 2023 "solvers.ml" 66 2015 2031
+)
+"solvers.ml" 95 3260 3283 "solvers.ml" 95 3260 3292
+type(
+  int
+)
+"solvers.ml" 95 3260 3297 "solvers.ml" 95 3260 3301
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 95 3260 3302 "solvers.ml" 95 3260 3306
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 95 3260 3297 "solvers.ml" 95 3260 3306
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 95 3260 3276 "solvers.ml" 95 3260 3306
+type(
+  unit
+)
+"solvers.ml" 95 3260 3308 "solvers.ml" 95 3260 3316
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 66 2015 2023 "solvers.ml" 66 2015 2031
+)
+"solvers.ml" 95 3260 3317 "solvers.ml" 95 3260 3319
+type(
+  int Batteries.ref -> int -> unit
+)
+ident(
+  ext_ref Batteries.( := )
+)
+"solvers.ml" 95 3260 3320 "solvers.ml" 95 3260 3321
+type(
+  int Batteries.ref -> int
+)
+ident(
+  ext_ref Batteries.( ! )
+)
+"solvers.ml" 95 3260 3321 "solvers.ml" 95 3260 3329
+type(
+  int Batteries.ref
+)
+ident(
+  int_ref xcounter "solvers.ml" 66 2015 2023 "solvers.ml" 66 2015 2031
+)
+"solvers.ml" 95 3260 3320 "solvers.ml" 95 3260 3329
+type(
+  int
+)
+"solvers.ml" 95 3260 3330 "solvers.ml" 95 3260 3331
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( + )
+)
+"solvers.ml" 95 3260 3332 "solvers.ml" 95 3260 3333
+type(
+  int
+)
+"solvers.ml" 95 3260 3320 "solvers.ml" 95 3260 3333
+type(
+  int
+)
+"solvers.ml" 95 3260 3308 "solvers.ml" 95 3260 3333
+type(
+  unit
+)
+"solvers.ml" 95 3260 3275 "solvers.ml" 95 3260 3334
+type(
+  unit
+)
+"solvers.ml" 94 3225 3233 "solvers.ml" 95 3260 3334
+type(
+  unit
+)
+"solvers.ml" 96 3337 3345 "solvers.ml" 96 3337 3349
+type(
+  int -> unit
+)
+ident(
+  int_ref loop "solvers.ml" 76 2419 2431 "solvers.ml" 76 2419 2435
+)
+"solvers.ml" 96 3337 3351 "solvers.ml" 96 3337 3352
+type(
+  int
+)
+ident(
+  int_ref n "solvers.ml" 76 2419 2437 "solvers.ml" 76 2419 2438
+)
+"solvers.ml" 96 3337 3353 "solvers.ml" 96 3337 3354
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Batteries.( + )
+)
+"solvers.ml" 96 3337 3355 "solvers.ml" 96 3337 3356
+type(
+  int
+)
+"solvers.ml" 96 3337 3350 "solvers.ml" 96 3337 3357
+type(
+  int
+)
+"solvers.ml" 96 3337 3345 "solvers.ml" 96 3337 3357
+call(
+  tail
+)
+type(
+  unit
+)
+"solvers.ml" 94 3225 3233 "solvers.ml" 96 3337 3357
+type(
+  unit
+)
+"solvers.ml" 93 3184 3192 "solvers.ml" 96 3337 3357
+type(
+  unit
+)
+"solvers.ml" 90 3028 3036 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+"solvers.ml" 89 3003 3009 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+"solvers.ml" 86 2828 2834 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+"solvers.ml" 83 2685 2691 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+"solvers.ml" 78 2503 2509 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+"solvers.ml" 77 2456 2462 "solvers.ml" 96 3337 3358
+type(
+  unit
+)
+type(
+  unit
+)
+"solvers.ml" 97 3363 3367 "solvers.ml" 97 3363 3372
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 64 1919 1927 "solvers.ml" 64 1919 1932
+)
+"solvers.ml" 97 3363 3374 "solvers.ml" 97 3363 3375
+type(
+  int
+)
+"solvers.ml" 97 3363 3380 "solvers.ml" 97 3363 3384
+type(
+  ?n:int ->
+  ?ofsy:int ->
+  ?incy:int ->
+  ?y:Lacaml.D.vec -> ?ofsx:int -> ?incx:int -> Lacaml.D.vec -> Lacaml.D.vec
+)
+ident(
+  ext_ref Lacaml.D.copy
+)
+"solvers.ml" 97 3363 3385 "solvers.ml" 97 3363 3389
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 97 3363 3380 "solvers.ml" 97 3363 3389
+call(
+  stack
+)
+type(
+  Lacaml.D.vec
+)
+"solvers.ml" 97 3363 3367 "solvers.ml" 97 3363 3389
+type(
+  unit
+)
+"solvers.ml" 97 3363 3391 "solvers.ml" 97 3363 3395
+type(
+  Lacaml.D.vec -> float -> Lacaml.D.vec -> unit
+)
+ident(
+  int_ref bigF "solvers.ml" 53 1522 1523 "solvers.ml" 53 1522 1527
+)
+"solvers.ml" 97 3363 3396 "solvers.ml" 97 3363 3400
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 97 3363 3401 "solvers.ml" 97 3363 3403
+type(
+  float
+)
+"solvers.ml" 97 3363 3404 "solvers.ml" 97 3363 3406
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref iF "solvers.ml" 68 2089 2097 "solvers.ml" 68 2089 2099
+)
+"solvers.ml" 97 3363 3391 "solvers.ml" 97 3363 3406
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 97 3363 3408 "solvers.ml" 97 3363 3412
+type(
+  int -> unit
+)
+ident(
+  int_ref loop "solvers.ml" 76 2419 2431 "solvers.ml" 76 2419 2435
+)
+"solvers.ml" 97 3363 3413 "solvers.ml" 97 3363 3414
+type(
+  int
+)
+"solvers.ml" 97 3363 3408 "solvers.ml" 97 3363 3414
+call(
+  stack
+)
+type(
+  unit
+)
+"solvers.ml" 98 3417 3421 "solvers.ml" 98 3417 3426
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 64 1919 1927 "solvers.ml" 64 1919 1932
+)
+"solvers.ml" 98 3417 3428 "solvers.ml" 98 3417 3437
+type(
+  int
+)
+ident(
+  int_ref numpoints "solvers.ml" 3 53 57 "solvers.ml" 3 53 66
+)
+"solvers.ml" 98 3417 3442 "solvers.ml" 98 3417 3446
+type(
+  Lacaml.D.vec
+)
+ident(
+  int_ref init "solvers.ml" 56 1627 1628 "solvers.ml" 56 1627 1632
+)
+"solvers.ml" 98 3417 3421 "solvers.ml" 98 3417 3446
+type(
+  unit
+)
+"solvers.ml" 98 3417 3448 "solvers.ml" 98 3417 3453
+type(
+  float array
+)
+ident(
+  int_ref tvals "solvers.ml" 62 1825 1833 "solvers.ml" 62 1825 1838
+)
+"solvers.ml" 98 3417 3455 "solvers.ml" 98 3417 3460
+type(
+  Lacaml.D.vec array
+)
+ident(
+  int_ref xvals "solvers.ml" 64 1919 1927 "solvers.ml" 64 1919 1932
+)
+"solvers.ml" 98 3417 3448 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 98 3417 3421 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 97 3363 3408 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 97 3363 3391 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 97 3363 3367 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 76 2419 2423 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 75 2376 2380 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 74 2335 2339 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 73 2295 2299 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 72 2241 2245 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 71 2201 2205 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 70 2161 2165 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 69 2125 2129 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 68 2089 2093 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 67 2054 2058 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 66 2015 2019 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 64 1919 1923 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 62 1825 1829 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 61 1752 1754 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 60 1702 1704 "solvers.ml" 98 3417 3460
+type(
+  float array * Lacaml.D.vec array
+)
+type(
+  float array * Lacaml.D.vec array
+)
+"solvers.ml" 100 3467 3471 "solvers.ml" 100 3467 3478
+type(
+  (string * odemethod) list
+)
+ident(
+  def methods "solvers.ml" 101 3510 3551 "solvers.ml" 1 0 -1
+)
+"solvers.ml" 101 3510 3514 "solvers.ml" 101 3510 3521
+type(
+  string
+)
+"solvers.ml" 101 3510 3523 "solvers.ml" 101 3510 3528
+type(
+  odemethod
+)
+ident(
+  int_ref euler "solvers.ml" 18 370 374 "solvers.ml" 18 370 379
+)
+"solvers.ml" 101 3510 3513 "solvers.ml" 101 3510 3529
+type(
+  string * odemethod
+)
+"solvers.ml" 101 3510 3532 "solvers.ml" 101 3510 3543
+type(
+  string
+)
+"solvers.ml" 101 3510 3545 "solvers.ml" 101 3510 3549
+type(
+  odemethod
+)
+ident(
+  int_ref trap "solvers.ml" 52 1512 1516 "solvers.ml" 52 1512 1520
+)
+"solvers.ml" 101 3510 3531 "solvers.ml" 101 3510 3550
+type(
+  string * odemethod
+)
+"solvers.ml" 101 3510 3512 "solvers.ml" 101 3510 3551
+type(
+  (string * odemethod) list
+)
+type(
+  (string * odemethod) list
+)

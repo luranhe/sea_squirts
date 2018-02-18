@@ -1,0 +1,171 @@
+\documentclass{article}
+
+\textwidth=14.5cm \oddsidemargin=1cm
+\evensidemargin=1cm
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{blkarray}
+\usepackage{bm}
+\usepackage{enumerate}
+\usepackage{eucal}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+%\usepackage{fc}
+\usepackage[utf8]{inputenc}
+\usepackage{kbordermatrix}
+\usepackage{listings}
+\usepackage{pifont}
+\usepackage{qtree}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{tikz-cd}
+\usepackage{tipa}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{prt}{Part}[section]
+\renewcommand*{\theprt}{\alph{prt}}
+\newtheorem{prob}{Problem}
+\newtheorem{lema}{Lemma}
+\newtheorem{thm}{Theorem}
+\newtheorem{fact}{Fact}
+\newtheorem*{exer}{Exercise}
+\newtheorem{case}{Case}
+
+\renewcommand{\kbldelim}{(}% Left delimiter
+\renewcommand{\kbrdelim}{)}% Right delimiter
+
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+
+\newcommand\nc{\newcommand}
+\nc{\on}{\operatorname}
+\nc{\BR}{\mathbb R}
+\nc{\BC}{\mathbb C}
+\nc{\BQ}{\mathbb Q}
+\nc{\BZ}{\mathbb Z}
+\nc{\BN}{\mathbb N}
+\nc{\Hom}{\on{Hom}}
+\nc{\wt}{\widetilde}
+\nc{\ca}{{\sim}}
+\nc{\conj}{\,\mathbin{\centerdot}\,}
+\nc{\cmark}{\ding{51}}
+\nc{\xmark}{\ding{55}}
+
+\makeatletter
+\newcommand{\dotminus}{\mathbin{\text{\@dotminus}}}
+
+\newcommand{\@dotminus}{%
+  \ooalign{\hidewidth\raise1ex\hbox{.}\hidewidth\cr$\m@th-$\cr}%
+}
+\makeatother
+
+\DeclareMathOperator{\rem}{rem}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\gen}{gen}
+\DeclareMathOperator{\Formseq}{Formseq}
+\DeclareMathOperator{\occ}{occ}
+\DeclareMathOperator{\nocc}{nocc}
+\DeclareMathOperator{\subst}{subst}
+\DeclareMathOperator{\Form}{Form}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\cond}{cond}
+\DeclareMathOperator{\ngat}{neg}
+\DeclareMathOperator{\sub}{sub}
+\DeclareMathOperator{\Tm}{Tm}
+\DeclareMathOperator{\suc}{succ}
+\DeclareMathOperator{\nmrl}{nmrl}
+\DeclareMathOperator{\Prov}{Prov}
+\DeclareMathOperator{\Rov}{Rov}
+\DeclareMathOperator{\Refut}{Refut}
+\DeclareMathOperator{\N}{N}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Con}{(Con)}
+\DeclareMathOperator{\pa}{PA}
+\DeclareMathOperator{\sa}{SA}
+\DeclareMathOperator{\triv}{triv}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\ext}{ext}
+\DeclareMathOperator{\TC}{TC}
+\DeclareMathOperator{\ot}{ot}
+\DeclareMathOperator{\On}{On}
+\DeclareMathOperator{\cf}{cf}
+\DeclareMathOperator{\lex}{lex}
+\DeclareMathOperator{\Def}{Def}
+\DeclareMathOperator{\Add}{Add}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\const}{constant}
+\DeclareMathOperator{\atan}{atan2}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\fpart}{frac}
+\sisetup{input-protect-tokens=\ca,input-symbols=\ca}
+
+\newbox\gnBoxA
+\newdimen\gnCornerHgt
+\setbox\gnBoxA=\hbox{$\ulcorner$}
+\global\gnCornerHgt=\ht\gnBoxA
+\newdimen\gnArgHgt
+\def\corn #1{%
+\setbox\gnBoxA=\hbox{$#1$}%
+\gnArgHgt=\ht\gnBoxA%
+\ifnum     \gnArgHgt<\gnCornerHgt \gnArgHgt=0pt%
+\else \advance \gnArgHgt by -\gnCornerHgt%
+\fi \raise\gnArgHgt\hbox{$\ulcorner$} \box\gnBoxA %
+\raise\gnArgHgt\hbox{$\urcorner$}}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\@ifpackageloaded{MnSymbol}\@tempswafalse\@tempswatrue
+\if@tempswa
+  \DeclareFontFamily{U}{MnSymbolC}{}
+  \DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+  \SetSymbolFont{MnSyC}{bold}{U}{MnSymbolC}{b}{n}
+  \DeclareFontShape{U}{MnSymbolC}{m}{n}{
+      <-6>  MnSymbolC5
+     <6-7>  MnSymbolC6
+     <7-8>  MnSymbolC7
+     <8-9>  MnSymbolC8
+     <9-10> MnSymbolC9
+    <10-12> MnSymbolC10
+    <12->   MnSymbolC12}{}
+  \DeclareFontShape{U}{MnSymbolC}{b}{n}{
+      <-6>  MnSymbolC-Bold5
+     <6-7>  MnSymbolC-Bold6
+     <7-8>  MnSymbolC-Bold7
+     <8-9>  MnSymbolC-Bold8
+     <9-10> MnSymbolC-Bold9
+    <10-12> MnSymbolC-Bold10
+    <12->   MnSymbolC-Bold12}{}
+  \DeclareMathSymbol{\aleph}{\mathord}{MnSyC}{"AF}
+  \DeclareMathSymbol{\beth}{\mathord}{MnSyC}{"B0}
+  \DeclareMathSymbol{\gimel}{\mathord}{MnSyC}{"B1}
+  \DeclareMathSymbol{\daleth}{\mathord}{MnSyC}{"B2}
+\fi
+\makeatother
+
+\begin{document}
+
+$$c(DI)=\frac{1}{2\sqrt{2}}\sqrt{\frac{\kappa}{\tau_{\text{in}}}\left(1+e^{\frac{-DI}{\tau_{\text{open}}}}\left(-1+\frac{4\tau_{\text{in}}}{\tau_{\text{out}}}\right)\right)}\left(-1+3\sqrt{\frac{\left(-1+e^{\frac{-DI}{\tau_{\text{open}}}}\right)\left(-4\tau_{\text{in}}+\tau_{\text{out}}\right)}{4\tau_{\text{in}}+\left(-1+e^{\frac{-DI}{\tau_{\text{open}}}}\right)\tau_{\text{out}}}}\right)$$
+
+$$c(DI)=\frac{1}{2\sqrt{2}}\sqrt{\frac{\kappa}{\tau_{\text{in}}}\left(1+e^{\frac{-DI}{\tau_{\text{open}}}}\left(-1+h_{\text{min}}\right)\right)}\left(-1+3\sqrt{1-h_\text{min}+\frac{(-1+h_\text{min})h_\text{min}}{-1+e^{\frac{DI}{\tau_\text{open}}}+h_\text{min}}}\right)$$
+
+$$A^*=\tau_\text{close}\ln\left(\frac{1+e^{\frac{B}{\tau_\text{close}-\tau_\text{open}}}(-1+h_\text{min})}{h_\text{min}}\right)$$
+
+$$\int_1^{\tilde{x}}\frac{dk_1}{C^*+c\left(\phi_\text{rev}(\tilde{x})-\frac{L-k_1}{C^*}-A^*\right)}-\int_1^{\phi_\text{rev}(\tilde{x})}\left(\frac{c\left(k_2-\frac{L-\tilde{x}}{C^*}-A^*\right)}{C^*+c\left(k_2-\frac{L-\tilde{x}}{C^*}-A^*\right)}-\int_1^{\tilde{x}}\frac{c'\left(k_2-\frac{L-k_1}{C^*}-A^*\right)}{\left(C^*+c\left(k_2-\frac{L-k_1}{C^*}-A^*\right)\right)^2}dk_1\right)dk_2=\text{constant}$$
+
+\end{document}
