@@ -1,5 +1,43 @@
+open Core ;;
+open Unix ;;
 open Lacaml.D ;;
 open Multicellparams ;;
+
+let folder_int : int =
+  let to_int (s : string) : int option =
+    match Int.of_string s with
+    | i -> Some i
+    | exception (Failure _) -> None in
+  let ifs () : int array =
+    Array.filter_map (Sys.readdir topfolder) ~f:to_int in
+  match Array.max_elt (ifs ()) ~compare:Int.compare with
+  | None -> 0
+  | Some i -> succ i
+  | exception (Sys_error _) -> 0
+
+let folder : string = topfolder ^ Int.to_string folder_int ^ "/" ;;
+
+let file : string = folder ^ filename ;;
+
+(* Automatically detect # of CPUs, only useful if ForkWork can't somehow *)
+let cpu_count : int =
+  (* Utility for running in the command line and retrieving the result *)
+  let syscall (cmd : string) : string =
+    let (ic, oc) : In_channel.t * Out_channel.t = open_process cmd in
+    let open Buffer in
+    let buf : t = create 16 in
+    (try while true do add_channel buf ic 1 done with End_of_file -> ());
+    close_process (ic, oc) |> ignore;
+    String.strip (contents buf) in
+  try
+    Int.of_string @@
+      match Sys.os_type with
+      | "Win32" -> Sys.getenv_exn "NUMBER_OF_PROCESSORS"
+      | _ ->
+        syscall @@
+          if syscall "uname -s" = "FreeBSD" then "sysctl -n hw.ncpu"
+          else "getconf _NPROCESSORS_ONLN"
+  with _ -> 1 ;;
 
 let make (dom : float array) (sol : vec array) : int =
   let open Parmap in
@@ -25,6 +63,6 @@ let make (dom : float array) (sol : vec array) : int =
     | false -> remove folder; command @@ sprintf "mkdir %s" folder
     | exception (Sys_error _) -> command @@ sprintf "mkdir %s" folder
   end |> ignore;
-  pariteri ~ncores:4 ~chunksize:1 export_png (A sol);
+  pariteri ~ncores:cpu_count export_png (A sol);
   command @@ sprintf "ffmpeg -r 24 -pattern_type glob -i '%s*.png' %s%s"
     file file movtype ;;

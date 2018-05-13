@@ -5,6 +5,7 @@ open ForkWork ;;
 open Multicellsolver ;;
 open Paramsets ;;
 
+(* Generic function for prompting command-line input *)
 let prompt (m : string) (f : string -> 'a) : 'a =
   let rec prompter () : 'a =
     printf "%s " m; Out_channel.(flush stdout);
@@ -12,6 +13,7 @@ let prompt (m : string) (f : string -> 'a) : 'a =
     with e -> printf "%s\n" @@ Exn.to_string e; prompter () in
   prompter () ;;
 
+(* Main process *)
 let process (p : (module PARAMS)) : string =
   let module P = (val p : PARAMS) in
   let module M = MultiCell(P) in
@@ -19,7 +21,9 @@ let process (p : (module PARAMS)) : string =
   Random.self_init (); mkdir_p P.folder;
   Solvers.euler p bigF x0 dom |> Picture.make p ;;
 
+(* Automatically detect # of CPUs, only useful if ForkWork can't somehow *)
 let cpu_count : int =
+  (* Utility for running in the command line and retrieving the result *)
   let syscall (cmd : string) : string =
     let (ic, oc) : In_channel.t * Out_channel.t = open_process cmd in
     let open Buffer in
@@ -41,6 +45,7 @@ let numtasks : int = prompt "Number of tasks:" Int.of_string in
 let t : float = gettimeofday () in
 set_ncores ~detect:true cpu_count;
 printf "Processing on %i cores.\n" @@ ncores ();
+(* Main stuff happens here, and then Mathematica is called after *)
 create_process ~prog:"./plotter.wls"
   ~args:(map_list process @@ make_params numtasks) |> ignore;
 printf "Time elapsed: %f (s)\n" @@ gettimeofday () -. t ;;

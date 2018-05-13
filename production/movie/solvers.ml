@@ -3,6 +3,10 @@
 open Lacaml.D ;;
 open Batteries ;;
 
+let numpoints : int =
+  let open Multicellparams in
+  int_of_float tt / 20 ;;
+
 let rand_store : float option ref = ref None ;;
 
 let rand_normal (r : float option ref) : float =
@@ -23,10 +27,6 @@ let rand_normal (r : float option ref) : float =
   | Some z -> r := None; z
   | None ->
     let (z0, z1) : float * float = normal () in r := Some z0; z1 ;;
-
-let numpoints : int =
-  let open Multicellparams in
-  int_of_float (tt /. dt) / 10 ;;
 
 let (lkick, rkick) : float ref * float ref = ref 0., ref 10000. ;;
 

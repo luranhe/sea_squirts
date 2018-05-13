@@ -10,6 +10,7 @@ let euler
 : (float * float) Stack.t * (float * float) Stack.t =
   let module P = (val p : PARAMS) in
   let open P in
+  (* Utility for generating random variables with a normal distribution *)
   let rand_normal : unit -> float =
     let rand_store : float option ref = ref None in
     fun () ->
@@ -37,6 +38,7 @@ let euler
   let gridpoints : int = Vec.dim xvec / 2 in
   let kickpoints : int = gridpoints / 60 in
   let gridoff : int = gridpoints - kickpoints in
+  (* Front and back tracking utilities *)
   let track : bool array = Array.create ~len:(2 * gridpoints |> succ) true in
   let open Stack in
   let (front, back) : (float * float) t * (float * float) t =
@@ -57,6 +59,7 @@ let euler
         unsafe_set track i cross;
         if cross then push back (unsafe_get dom @@ pred i - gridpoints, t)
       end in
+  (* Main loop *)
   for n = 1 to nmax do
     let t : float =
       let open Float in
@@ -66,6 +69,7 @@ let euler
       let open Posix_math in
       bigF xvec t iF;
       axpy ~alpha:dt iF xvec;
+      (* Update the future times at which left and right kicks happen *)
       if t >=. !lkick then
         begin
           Vec.fill ~n:kickpoints xvec kickvalue;
@@ -79,6 +83,7 @@ let euler
             * cbrt (cos (2. * pi * t / period)) + rand_normal ()
         end
     end;
+    (* Front and back tracking *)
     if Random.bool () then
       begin
         Vec.iteri (detect_front (t /. 1000.)) ~n:(gridpoints / 2) ~incx:2 xvec;

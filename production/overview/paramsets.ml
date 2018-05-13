@@ -28,6 +28,7 @@ module type FRESHDIR =
     val folder_int : int
   end ;;
 
+(* Functor naively converting FRESHDIR to PARAMS *)
 module FromDir(F : FRESHDIR) : PARAMS =
   struct
     include Multicellparams
@@ -36,6 +37,7 @@ module FromDir(F : FRESHDIR) : PARAMS =
     let file : string = folder ^ filename
   end ;;
 
+(* Set up the same thing, but with a new directory with incremented index *)
 let inc (f : (module FRESHDIR)) : (module FRESHDIR) =
   let module F = (val f : FRESHDIR) in
   (module
@@ -44,6 +46,7 @@ let inc (f : (module FRESHDIR)) : (module FRESHDIR) =
       let folder_int : int = F.folder_int |> succ
     end) ;;
 
+(* Find the folder with highest index and and start even higher *)
 let new_dir : (module FRESHDIR) =
   (module
     struct
@@ -56,12 +59,13 @@ let new_dir : (module FRESHDIR) =
           | exception (Failure _) -> None in
         let ifs () : int array =
           Array.filter_map (Sys.readdir topfolder) ~f:to_int in
-        match Array.max_elt (ifs ()) ~cmp:Int.compare with
+        match Array.max_elt (ifs ()) ~compare:Int.compare with
         | None -> 0
         | Some i -> succ i
         | exception (Sys_error _) -> 0
     end) ;;
 
+(* Create a list of FRESHDIR modules with new directory names *)
 let dirlist (n : int) : (module FRESHDIR) list =
   let rec dirlist_aux
   (n : int) (f : (module FRESHDIR)) (l : (module FRESHDIR) list)
@@ -70,10 +74,12 @@ let dirlist (n : int) : (module FRESHDIR) list =
     else dirlist_aux (pred n) (inc f) (f::l) in
   dirlist_aux n new_dir [] ;;
 
+(* Function implementing FromDir *)
 let from_dir (f : (module FRESHDIR)) : (module PARAMS) =
   let module F = (val f : FRESHDIR) in
   (module FromDir(F) : PARAMS) ;;
 
+(* Collect annotated parameters *)
 let infodump (p : (module PARAMS)) : string list =
   let module P = (val p : PARAMS) in
   let open P in
@@ -83,7 +89,9 @@ let infodump (p : (module PARAMS)) : string list =
       "minbcl", minbcl; "maxbcl", maxbcl; "std", std; "period", period;
       "kickvalue", kickvalue] in
   List.map info
-    ~f:(fun (s, r : string * float) -> s ^ ": " ^ Float.to_string r ^ "\r") ;;
+    ~f:(fun (s, r : string * float) -> s ^ ": " ^ Float.to_string r ^ "\r\n")
+;;
 
+(* Make n new directories *)
 let make_params : int -> (module PARAMS) list =
   Fn.compose (List.rev_map ~f:from_dir) dirlist ;;

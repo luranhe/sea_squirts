@@ -33,11 +33,13 @@ module MultiCell(P : PARAMS) : FUNCTIONS =
       Mat.scal rt m_aux; m_aux
 
     let bigF (x : vec) (_t : float) (x' : vec) : unit =
+      (* Main computation, see bottom *)
       Vec.zmxy ~n:gridpoints x' x (Vec.sqr ~n:gridpoints ~y:x' x);
       axpy ~alpha:negtoutinv ~n:gridpoints x (sbmv ~y:(Vec.mul ~n:gridpoints
         ~z:x' x' ~ofsy:(succ gridpoints) x) band_storage ~beta:tininv x);
       let open Bigarray.Array1 in
       let open Core in
+      (* Gated activation *)
       for n = succ gridpoints to 2 * gridpoints do
         let (h, v) : float * float =
           unsafe_get x n, unsafe_get x @@ n - gridpoints in
@@ -45,6 +47,7 @@ module MultiCell(P : PARAMS) : FUNCTIONS =
         unsafe_set x' n @@
           if v <=. vcrit then (1. - h) / topen else h / negtclose
       done;
+      (* Fix boundaries *)
       let (x2, xm2) : float * float =
         unsafe_get x 2, unsafe_get x @@ pred gridpoints in
       let (x1', xm1') : float * float =
