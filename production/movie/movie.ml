@@ -3,6 +3,7 @@ open Unix ;;
 open Lacaml.D ;;
 open Multicellparams ;;
 
+(* New directory *)
 let folder_int : int =
   let to_int (s : string) : int option =
     match Int.of_string s with
@@ -51,11 +52,13 @@ let make (dom : float array) (sol : vec array) : int =
       if n = 0 then acc else log_aux (n / 10) (acc + 1) in
     log_aux n 0 in
   let framedigits : int = log10 timesteps in
+  (* Utility for making images *)
   let export_png (n : int) (v : vec) : unit =
     let instance : float array = Vec.to_array v in
     plsdev "pngqt"; plsfnam @@ sprintf "%s%0*d.png" file framedigits n;
     plinit (); plenv 0. xmax 0. 1. 0 0;
     left instance @@ length instance / 2 |> plline dom; plend () in
+  (* Make directory *)
   begin
     match is_directory folder with
     | true ->
@@ -63,6 +66,8 @@ let make (dom : float array) (sol : vec array) : int =
     | false -> remove folder; command @@ sprintf "mkdir %s" folder
     | exception (Sys_error _) -> command @@ sprintf "mkdir %s" folder
   end |> ignore;
+  (* Make images, by far the most time-consuming step *)
   pariteri ~ncores:cpu_count export_png (A sol);
+  (* Make movie *)
   command @@ sprintf "ffmpeg -r 24 -pattern_type glob -i '%s*.png' %s%s"
     file file movtype ;;

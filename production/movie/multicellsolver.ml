@@ -24,16 +24,19 @@ let band_storage : mat =
 
 let bigF (x : vec) (_t : float) (x' : vec) : unit =
   let open Core in
+  (* Main computation, see bottom *)
   Vec.zmxy ~n:gridpoints x' x (Vec.sqr ~n:gridpoints ~y:x' x);
   axpy ~alpha:toutinv ~n:gridpoints x (sbmv ~y:(Vec.mul ~n:gridpoints ~z:x' x'
     ~ofsy:(succ gridpoints) x) band_storage ~beta:tininv x);
   let open BatBigarray.Array1 in
+  (* Gated activation *)
   for n = succ gridpoints to 2 * gridpoints do
     let (h, v) : float * float =
       unsafe_get x n, unsafe_get x @@ n - gridpoints in
     let open Float in
     unsafe_set x' n (if v <=. vcrit then (1. - h) / topen else h / negtclose)
   done;
+  (* Fix boundaries *)
   let (x2, xm2) : float * float =
     unsafe_get x 2, unsafe_get x @@ pred gridpoints in
   let (x1', xm1') : float * float = unsafe_get x' 1, unsafe_get x' gridpoints in

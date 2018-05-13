@@ -3,12 +3,14 @@
 open Lacaml.D ;;
 open Batteries ;;
 
+(* Number of video frames, I should have a better way of controlling this *)
 let numpoints : int =
   let open Multicellparams in
   int_of_float tt / 20 ;;
 
 let rand_store : float option ref = ref None ;;
 
+(* Utility for generating random variables with a normal distribution *)
 let rand_normal (r : float option ref) : float =
   let normal () : float * float =
     let open Core.Float in
@@ -28,6 +30,7 @@ let rand_normal (r : float option ref) : float =
   | None ->
     let (z0, z1) : float * float = normal () in r := Some z0; z1 ;;
 
+(* Where the next left/right kicks will be *)
 let (lkick, rkick) : float ref * float ref = ref 0., ref 10000. ;;
 
 let euler
@@ -35,7 +38,7 @@ let euler
 (init : vec)
 (dt : float)
 (tmax : float)
-  : float array * vec array =
+  : vec array =
   let nmax : int = tmax /. dt |> int_of_float in
   if nmax < numpoints then raise (Failure "dt too large for plot") else
     let tvals : float array =
@@ -70,4 +73,4 @@ let euler
           xvals.(!xcounter) <- copy init; xcounter := succ !xcounter
         end
     done;
-    xvals.(numpoints) <- init; tvals, xvals ;;
+    xvals.(numpoints) <- init; xvals ;;
