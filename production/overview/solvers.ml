@@ -34,6 +34,7 @@ let euler
   let hmin : float = 4. *. tin /. tout in
   let (lkick, rkick) : float ref * float ref = ref 0., ref 0. in
   let nmax : int = tt /. dt |> int_of_float in
+  (* This will be the derivative vector *)
   let iF : vec = Vec.create @@ Vec.dim xvec in
   let gridpoints : int = Vec.dim xvec / 2 in
   let kickpoints : int = gridpoints / 60 in

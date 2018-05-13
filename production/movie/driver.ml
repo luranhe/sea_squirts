@@ -3,6 +3,7 @@ open Multicellsolver ;;
 
 Core.Random.self_init () ;;
 
+(* Euler solve (timed) *)
 let sol : Lacaml.D.vec array =
   let open BatUnix in
   let open BatPrintf in

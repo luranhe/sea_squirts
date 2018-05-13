@@ -46,18 +46,21 @@ let euler
     let xvals : vec array =
       Vec.create 0 |> BatArray.make @@ succ numpoints in
     let xcounter : int ref = ref 1 in
+    (* This will be the derivative vector *)
     let iF : vec = Vec.create @@ Vec.dim init in
     let gridpoints : int = Vec.dim init / 2 in
     let kickpoints : int = gridpoints / 60 in
     let gridoff : int = gridpoints - kickpoints in
     let open Core.Float in
     xvals.(0) <- copy init;
+    (* Main loop *)
     for n = 1 to nmax do
       let t : float =
         float_of_int n * dt in
       bigF init t iF;
       axpy ~alpha:dt iF init;
       let open Multicellparams in
+      (* Update the future times at which left and right kicks happen *)
       if t >=. !lkick then
         begin
           Vec.fill ~n:kickpoints init kickvalue;
