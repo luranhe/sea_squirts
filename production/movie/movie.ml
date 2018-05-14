@@ -20,7 +20,7 @@ let folder : string = topfolder ^ Int.to_string folder_int ^ "/" ;;
 
 let file : string = folder ^ filename ;;
 
-(* Automatically detect # of CPUs, only useful if ForkWork can't somehow *)
+(* Automatically detect # of CPUs *)
 let cpu_count : int =
   (* Utility for running in the command line and retrieving the result *)
   let syscall (cmd : string) : string =
