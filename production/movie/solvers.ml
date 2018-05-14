@@ -3,32 +3,35 @@
 open Lacaml.D ;;
 open Batteries ;;
 
-(* Number of video frames, I should have a better way of controlling this *)
+(* Seconds per frame *)
+let sframes : float = 0.02 ;;
+
+(* Number of video frames *)
 let numpoints : int =
   let open Multicellparams in
-  int_of_float tt / 20 ;;
-
-let rand_store : float option ref = ref None ;;
+  int_of_float (tt /. sframes) / 1000 ;;
 
 (* Utility for generating random variables with a normal distribution *)
-let rand_normal (r : float option ref) : float =
-  let normal () : float * float =
-    let open Core.Float in
-    let rec gen_pair () : float * float * float =
-      let (u, v) : float * float =
-        let open Core.Random in
-        1. - (float 2.), 1. - (float 2.) in
-      let s : float = u ** 2. + v ** 2. in
-      if s >=. 1. || s =. 0. then gen_pair () else u, v, s in
-    let (u, v, s) : float * float * float = gen_pair () in
-    let s_aux : float =
-      let open Multicellparams in
-      sqrt @@ -2. / s * log s |> ( * ) std in
-    u * s_aux, v * s_aux in
-  match !r with
-  | Some z -> r := None; z
-  | None ->
-    let (z0, z1) : float * float = normal () in r := Some z0; z1 ;;
+let rand_normal : unit -> float =
+  let rand_store : float option ref = ref None in
+  fun () ->
+    let normal () : float * float =
+      let open Core.Float in
+      let rec gen_pair () : float * float * float =
+        let (u, v) : float * float =
+          let open Core.Random in
+          1. - (float 2.), 1. - (float 2.) in
+        let s : float = u ** 2. + v ** 2. in
+        if s >=. 1. || s =. 0. then gen_pair () else u, v, s in
+      let (u, v, s) : float * float * float = gen_pair () in
+      let s_aux : float =
+        let open Multicellparams in
+        sqrt @@ -2. / s * log s |> ( * ) std in
+      u * s_aux, v * s_aux in
+    match !rand_store with
+    | Some z -> rand_store := None; z
+    | None ->
+      let (z0, z1) : float * float = normal () in rand_store := Some z0; z1 ;;
 
 (* Where the next left/right kicks will be *)
 let (lkick, rkick) : float ref * float ref = ref 0., ref 10000. ;;
@@ -59,17 +62,20 @@ let euler
         float_of_int n * dt in
       bigF init t iF;
       axpy ~alpha:dt iF init;
+      let open Posix_math in
       let open Multicellparams in
       (* Update the future times at which left and right kicks happen *)
       if t >=. !lkick then
         begin
           Vec.fill ~n:kickpoints init kickvalue;
-          lkick := !lkick + bcl + rand_normal rand_store
+          lkick := !lkick + maxbcl + (maxbcl - minbcl)
+            * cbrt (cos (2. * pi * t / period)) + rand_normal ()
         end;
       if t >=. !rkick then
         begin
           Vec.fill ~n:kickpoints ~ofsx:gridoff init kickvalue;
-          rkick := !rkick + bcl + rand_normal rand_store
+          rkick := !rkick + maxbcl - (maxbcl - minbcl)
+            * cbrt (cos (2. * pi * t / period)) + rand_normal ()
         end;
       if t >=. tvals.(!xcounter) then
         begin

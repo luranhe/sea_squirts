@@ -10,8 +10,10 @@ let tt : float = 20000. ;;
 let dx : float = 0.01 ;;
 let xmax : float = 3. ;;
 
-let bcl : float = 10000. ;;
+let minbcl : float = 10000. ;;
+let maxbcl : float = 10000. ;;
 let std : float = 700. ;;
+let period : float = 1440000. ;;
 let kickvalue : float = 0.8 ;;
 
 let topfolder : string = "movies/" ;;

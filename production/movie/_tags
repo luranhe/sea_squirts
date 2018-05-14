@@ -8,4 +8,4 @@ true: annot, thread
 true: optimize(3)
 
 # Link
-true: package(lacaml, plplot, batteries, core, parmap)
+true: package(lacaml, posix-math, plplot, batteries, core, parmap)
