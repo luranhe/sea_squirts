@@ -68,6 +68,7 @@ let euler
     begin
       let open Float in
       let open Posix_math in
+      (* Main update *)
       bigF xvec t iF;
       axpy ~alpha:dt iF xvec;
       (* Update the future times at which left and right kicks happen *)

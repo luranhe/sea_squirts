@@ -60,6 +60,7 @@ let euler
     for n = 1 to nmax do
       let t : float =
         float_of_int n * dt in
+      (* Main update *)
       bigF init t iF;
       axpy ~alpha:dt iF init;
       let open Posix_math in
